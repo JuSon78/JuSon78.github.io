@@ -2,46 +2,36 @@
     background-color: #efefef;
     border-color: #dfdfdf;
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 60px;
+    height: 60px;
 }
 
 #Logo {
     margin-left: 30px;
-    padding-top: 1px;
+    padding-top: 10px;
     margin-right: 50px;
     float: left;
 }
 
-ul {
+#liste {
+    display:block;
     padding:0;
     margin:0;
     list-style-type:none;
-    float: center;
-    text-align: center;
+    padding-top: 10px;
 }
 
-li {
+.elementList {
     margin-left:3px;
     float: left;
     font-size: 25px;
-}
-
-ul li a {
-    display:block;
-    float: center;
-    background-color:#efefef;
-    color:black;
-    text-decoration:none;
-    text-align:center;
     padding: 5px;
-    margin-right: 90px;
-    border-color:#DCDCDC   #DCDCDC;
+    margin-right: 8%;
     color: grey;
+    text-decoration:none;
 }
 
-ul li a:hover {
+.elementList:hover {
     background-color: #D3D3D3;
     border-color: #696969 #696969;
-    padding-bottom: 9%;
+    padding: 5px;
 }
