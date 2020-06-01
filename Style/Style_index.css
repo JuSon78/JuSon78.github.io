@@ -1,0 +1,44 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 32px;
+    color: #ffffff;
+    background-color: #320289;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20%;
+}
+
+.title {
+    font-weight: 799;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+.title span {
+    display: inline-block;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+}
+
+.title span span {
+    display: block;
+    animation: titleReveal .7s both;
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes titleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100% );
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
