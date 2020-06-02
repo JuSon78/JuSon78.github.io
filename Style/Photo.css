@@ -111,6 +111,7 @@ figcaption {
     font: italic smaller sans-serif;
     padding: 3px;
     text-align: center;
+    text-decoration: none;
 }
 
 #rubrique {
@@ -145,4 +146,7 @@ figcaption {
 .Text_Image {
     text-decoration: none;
     Color: #001CCD;
+}
+a {
+    text-decoration: none;
 }

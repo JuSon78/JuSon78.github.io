@@ -1,0 +1,100 @@
+body {
+    background-color: #0F1923;
+    width: 100%;
+    height: 100%; }
+
+
+.message {
+    display: block;
+    float: center;
+    padding-top: 10px;
+    min-height: 32px;
+    background: #606060;
+    color: #c2c1c1;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    font-family: BrandonTextA,CenturyGothic,AppleGothic,"Century Gothic",sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-bottom : thin dotted;}
+
+.contactez-moi2 {
+    color: #ADADAD;
+    text-decoration: none;
+    font-weight: 799}
+
+
+.message2 {
+    width: 100%;
+    max-width: 795px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Nunito Regular",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: 799;
+    letter-spacing: 0;
+    line-height: 1.8;
+    color: #ADADAD;}
+
+#rubrique {
+    position: fixed;
+    right: 0;
+    top: 30%;
+    width: 8em;
+    margin: -2.5em 0 0 0;
+    z-index: 5;
+    background: hsl(0,0%,50%);
+    color: blue;
+    font-weight: bold;
+    font-size: large;
+    text-align: left;
+    border: solid hsl(240,100%,25%);
+    border-right: none;
+    padding: 0.2em 0.6em 0.1em 0.2em;
+    box-shadow: 0 1px 3px black;
+    border-radius: 3em 0.5em 0.5em 3em; }
+
+.Categorie {
+    color: blue;
+    font-size: 18px;
+    text-decoration: none;}
+
+.photo {
+    padding: 0;}
+
+.rangement{
+    display: table-cell;
+    margin: 100px;
+}
+
+figure {
+    display: table-row;
+    padding: 5px;
+}
+
+img {
+    max-width: 300px;
+    max-height: 400px;
+}
+
+figcaption {
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+    color: white;
+}
+
+
+.Suite {
+    float: right;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    background: #606060;
+    padding: 15px 15px 15px 15px;
+    margin-right: 500px;
+}
+
+
