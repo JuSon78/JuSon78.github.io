@@ -149,3 +149,13 @@ figcaption {
 a {
     text-decoration: none;
 }
+
+footer {
+    margin-top: 3%; }
+.footer {
+    column-span: all;
+    clear: both;
+    font-size: .9em;
+    color: white;
+    background-color: #cdcbcb;
+    padding: 1.11em; }
