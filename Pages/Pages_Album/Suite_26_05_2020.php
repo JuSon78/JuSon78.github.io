@@ -35,7 +35,7 @@
         </div>
 
         <!--Photo-->
-        <div style="margin-left: 15%; margin-right: auto; width: 50%; margin-top: 10px">
+        <div style="margin-left: 10%; margin-right: auto; width: 50%; margin-top: 10px">
             <div>
                 <div class="rangement">
                     <figure>
