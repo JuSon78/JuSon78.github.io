@@ -13,7 +13,7 @@
                 <span>
                     <div id="Bande">
                         <span>
-                         <a href="Page_Accueil.html"> <img src="../Photos/Logo/Coeur.png" height="40" width="60" id="Logo" alt="Logo"> </a>
+                         <a href="Page_Accueil.php"> <img src="../Photos/Logo/Coeur.png" height="40" width="60" id="Logo" alt="Logo"> </a>
                         </span>
 
                         <span>
@@ -36,7 +36,20 @@
                 </span>
         </header>
 
-        <?php include "../Style/Footer.php" ?>
+        <div>
+
+        <div class="Slider"> </div>
+            <div class="Text-box">
+                <h1>Site de Wilson et Julien</h1>
+                <p> Il faut de tout pour faire un monde, il me faut toi pour faire le mien.. <br><br>
+                    Si tu pouvais lire dans mon coeur, tu verrais la place où tu es... <br><br>
+                    Bref..Je t'aime
+                </p>
+            </div>
+
+        </div>
+
+        <?php include"../Style/Footer.php" ?>
 
 
     </body>
