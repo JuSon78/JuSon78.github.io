@@ -7,7 +7,6 @@ Body {
     width: 100%;
     height:  800px;
     background: url("../Photos/Album_Photos/07_03_2020/Rue_Chartres.png");
-    margin: 100px auto;
     animation: slide 20s infinite;
 }
 
