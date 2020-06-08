@@ -39,7 +39,7 @@
             <div>
                 <div class="rangement">
                     <figure>
-                        <img src="../../Photos/Album_Photos/26_05_2020/Chartres3.jpg" alt="Ville" height="400" width="300">
+                        <img src="../../Photos/Album_Photos/26_05_2020/Chartres3.png" alt="Ville" height="400" width="300">
                         <figcaption>
                             J'aime trop
                         </figcaption>
