@@ -12,21 +12,21 @@
             <span>
                 <div id="Bande">
                     <span>
-                     <a href="Page_Accueil.html"> <img src="../Photos/Logo/Coeur.png" height="40" width="60" id="Logo" alt="Logo"> </a>
+                     <a href="Page_Accueil.php"> <img src="../Photos/Logo/Coeur.png" height="40" width="60" id="Logo" alt="Logo"> </a>
                     </span>
 
                     <span>
                         <div>
                             <ul  id="liste">
-                                <li> <a class="elementList" href="Calendrier.html">Calendrier </a>
+                                <li> <a class="elementList" href="Calendrier.php">Calendrier </a>
                                     </li>
-                                <li> <a class="elementList" href="Album_Photo.html">Photos </a>
+                                <li> <a class="elementList" href="Album_Photo.php">Photos </a>
                                     </li>
-                                <li> <a class="elementList" href="Liste_Courses.html"> Liste Course </a>
+                                <li> <a class="elementList" href="Liste_Courses.php"> Liste Course </a>
                                     </li>
-                                <li> <a class="elementList" href="Achat.html">Achat </a>
+                                <li> <a class="elementList" href="Achat.php">Achat </a>
                                     </li>
-                                <li> <a class="elementList" href="Message.html">Message </a>
+                                <li> <a class="elementList" href="Message.php">Message </a>
                                     </li>
                             </ul>
                         </div>
@@ -52,7 +52,7 @@
         <!--Menu à droit-->
         <div id="rubrique">
             <ul class="Bande_Rubrique">
-                <li class="Bande_Rubrique"> <a class="Bande_Rubrique" href ="Pages_Album/Page2.html"> Voir les dates  </a> </li>
+                <li class="Bande_Rubrique"> <a class="Bande_Rubrique" href ="Pages_Album/Page2.php"> Voir les dates  </a> </li>
                 </br>
             </ul>
         </div>
@@ -100,20 +100,7 @@
             </div>
         </div>
 
-        <!--Information en bas-->
-        <footer>
-            <div id="footer">
-                <div>
-                    Propriété de Wilson HUARD et Julien DAURAT<br>
-                    <small>
-                        © 2020
-                        <a><abbr >WH & JD</abbr><sup>®</sup></a></small>
-                    Privacy policy <br>
-                    Created 01 juin 2020;<br>
-                    Last updated lun. 04 juin. 2020
-                </div>
-            </div>
-        </footer>
+        <?php include "../Style/Footer.php" ?>
 
     </body>
 </html>
