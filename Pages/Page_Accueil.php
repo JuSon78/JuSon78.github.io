@@ -11,7 +11,7 @@
         <!--Header-->
         <header>
                 <span>
-                    <div id="Bande">
+                    <div id="Bande2">
                         <span>
                          <a href="Page_Accueil.php"> <img src="../Photos/Logo/Coeur.png" height="40" width="60" id="Logo" alt="Logo"> </a>
                         </span>
@@ -49,7 +49,20 @@
 
         </div>
 
-        <?php include"../Style/Footer.php" ?>
+        <!--Information en bas-->
+        <footer>
+            <div id="footer2">
+                <div>
+                    Propriété de Wilson HUARD et Julien DAURAT<br>
+                    <small>
+                        © 2020
+                        <a><abbr >WH & JD</abbr><sup>®</sup></a></small>
+                    Privacy policy <br>
+                    Created 01 juin 2020;<br>
+                    Last updated lun. 08 juin. 2020
+                </div>
+            </div>
+        </footer>
 
 
     </body>
