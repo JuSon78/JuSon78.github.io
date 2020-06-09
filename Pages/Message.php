@@ -38,6 +38,8 @@
         <p style="font-size: 20px"> Ca peut être sympas faire comme un boîte de dialogue afin que l'on mette un message quand l'on
             veut et que quand l'autre ce connecte sur le site il le voit </p>
 
+        <?php ?>
+
         <?php include"../Style/Footer.php" ?>
 
     </body>
