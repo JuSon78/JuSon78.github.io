@@ -16,8 +16,8 @@
 
                         <span>
                             <div>
-                                <ul  id="liste">
-                                    <li> <a class="elementList" href="Calendrier.php">Calendrier </a>
+                                <ul id="liste">
+                                   <li> <a class="elementList" href="Calendrier.php">Calendrier </a>
                                         </li>
                                     <li> <a class="elementList" href="Album_Photo.php">Photos </a>
                                         </li>
@@ -26,6 +26,8 @@
                                     <li> <a class="elementList" href="Achat.php">Achat </a>
                                         </li>
                                     <li> <a class="elementList" href="Message.php">Message </a>
+                                        </li>
+                                    <li> <a class="elementList" href="Autres.php">Autres </a>
                                         </li>
                                 </ul>
                             </div>

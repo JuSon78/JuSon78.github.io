@@ -29,6 +29,8 @@
                                         </li>
                                     <li> <a class="elementList" href="Message.php">Message </a>
                                         </li>
+                                    <li> <a class="elementList" href="Autres.php">Autres </a>
+                                        </li>
                                 </ul>
                             </div>
                         </span>

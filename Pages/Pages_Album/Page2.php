@@ -45,7 +45,6 @@
                         </figure>
                     </div>
 
-                    <div class="rangement" style="width: 100px;"></div>
 
                     <div class="rangement">
                         <figure>
@@ -84,7 +83,6 @@
                     </figure>
                 </div>
 
-                <div class="rangement" style="width: 100px;"></div>
 
                 <div class="rangement">
                     <figure>

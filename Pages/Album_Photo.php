@@ -28,6 +28,8 @@
                                     </li>
                                 <li> <a class="elementList" href="Message.php">Message </a>
                                     </li>
+                                <li> <a class="elementList" href="Autres.php">Autres </a>
+                                    </li>
                             </ul>
                         </div>
                     </span>
@@ -68,7 +70,9 @@
                         </figcaption>
                     </figure>
                 </div>
+
                 <div class="rangement" style="width: 100px;"></div>
+
                 <div class="rangement">
                     <figure>
                         <img src="../Photos/Album_Photos/Wilson2.jpg" alt="Une personne" height="400" width="300">
@@ -88,7 +92,9 @@
                         </figcaption>
                     </figure>
                 </div>
+
                 <div class="rangement" style="width: 100px;"></div>
+
                 <div class="rangement">
                     <figure>
                         <img src="../Photos/Album_Photos/Wilson.jpg" alt="Une personne" height="400" width="300">
