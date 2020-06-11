@@ -44,8 +44,7 @@
 
     <p>
     <h1>Ajouter utilisateur</h1>
-    <form method="post">
-        <label>id</label> <input type="text" name="id">
+    <form method="POST">
         <label>Pseudo</label> <input type="text" name="pseudo">
         <label>Email</label> <input type="email" name="email">
         <label>PassWord</label> <input type="text" name="password">
@@ -54,15 +53,23 @@
     </form>
     <p>
         <?php
-        if (isset($_POST['prenom'])) {
-            $mysqli = new mysqli('localhost', 'root', 'root', 'Site_Web');
-            $mysqli->set_charset('utf8');
-            $requete='INSERT INTO id, pseudo, email, password, VALUES(NULL,"'.$_POST['id'].'","'.$_POST['pseudo'].'","'.$_POST['email'].'","'.$_POST['password'].'")';
-            $resultat = $mysqli->query($requete);
-            if ($resultat)
-                echo 'utilisateur a été ajouté';
-            else
-                echo 'Erreur';
+        if (isset($_POST['pseudo'])) {
+            try{
+                $pseudo = $_POST['pseudo'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
+                $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $requete='INSERT INTO Site_Web.user (pseudo, email, password) VALUES(\''.$pseudo.'\',\''.$email.'\',\''.$password.'\')';
+                $resultat = $db->exec($requete);
+                if ($resultat)
+                    echo 'utilisateur a été ajouté';
+                else
+                    echo 'Erreur';
+            }
+            catch (PDOException $e) {
+                echo $e;
+            }
         }
         ?>
     </p>
