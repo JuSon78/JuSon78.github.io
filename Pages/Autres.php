@@ -99,13 +99,12 @@
                     $suppression_pseudo= $_POST['suppression_pseudo'];
                     $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
                     $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $requete='DELETE FROM Site_Web.user WHERE \'pseudo\' =' .$suppression_pseudo;
-                   echo $requete;
-                   $resultat = $db->exec($requete);
+                    $requete ='DELETE FROM Site_Web.user WHERE pseudo =\'' . $suppression_pseudo . '\'';
+                    $resultat = $db->exec($requete);
                     if ($resultat)
-                        echo 'utilisateur a été supprimé';
+                        echo 'L\'utilisateur ' . $suppression_pseudo . ' a été supprimé';
                     else
-                        echo 'Erreur';
+                        echo 'L\'utilisateur ' . $suppression_pseudo . ' n\'existe pas';
                 }
                 catch (PDOException $e) {
                     echo $e;
