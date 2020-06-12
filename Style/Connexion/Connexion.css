@@ -3,26 +3,6 @@ body {
     margin: 0;
 }
 
-table {
-    border-collapse:collapse;
-    width:70%;
-    margin-left: 15%;
-}
-th, td {
-    border:1px solid black;
-    width:20%;
-    background-color: #e0e0e0;
-}
-td {
-    text-align:center;
-}
-caption {
-    font-weight:bold
-}
-th {
-    background-color: #d4d3d3;
-}
-
 .input_Enregistrer {
     background-color: darkcyan;
     color: white;
@@ -43,3 +23,9 @@ label {
     padding: 5px;
     padding-right: 120px;
 }
+
+#redirection {
+    text-decoration: none;
+    color: darkblue;
+}
+

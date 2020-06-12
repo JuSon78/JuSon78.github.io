@@ -13,25 +13,6 @@
                             <span>
                              <a href="../Page_Accueil.php"> <img src="../../Photos/Logo/Coeur.png" height="40" width="60" id="Logo" alt="Logo"> </a>
                             </span>
-
-                            <span>
-                                <div>
-                                     <ul id="liste">
-                                        <li> <a class="elementList" href="../Calendrier.php">Calendrier </a>
-                                            </li>
-                                        <li> <a class="elementList" href="../Album_Photo.php">Photos </a>
-                                            </li>
-                                        <li> <a class="elementList" href="../Liste_Courses.php"> Liste Course </a>
-                                            </li>
-                                        <li> <a class="elementList" href="../Achat.php">Achat </a>
-                                            </li>
-                                        <li> <a class="elementList" href="../Message.php">Message </a>
-                                            </li>
-                                        <li> <a class="elementList" href="../Autres.php">Autres </a>
-                                            </li>
-                                    </ul>
-                                </div>
-                            </span>
                         </div>
                     </span>
         </header>
@@ -39,7 +20,7 @@
 
         <span style="text-align: center"
         <p>
-        <h2> Ajouter utilisateur </h2>
+        <h2> S'inscrire </h2>
 
         <form method="POST">
             <p> <label>Pseudo :</label> <br>
@@ -53,6 +34,8 @@
 
             <p> <input class="input_Enregistrer" type="submit" value="Ajouter">
         </form>
+        <p> si vous avez déjà un compte veuillez vous  <a href="Page_connecter.php" id="redirection">connecter</a>
+        </p>
         </p>
 
         <p>
