@@ -11,7 +11,7 @@
                     <span>
                         <div id="Bande">
                             <span>
-                             <a href="../Page_Accueil.php"> <img src="../../Photos/Logo/Coeur.png" height="40" width="60" id="Logo" alt="Logo"> </a>
+                             <img src="../../Photos/Logo/Coeur.png" height="40" width="60" id="Logo" alt="Logo"> </a>
                             </span>
                         </div>
                     </span>
