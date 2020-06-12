@@ -5,6 +5,7 @@
     <title>Achat</title>
     <link rel="stylesheet" type="text/css" href="../Style/Header_Footer.css">
     <link rel="stylesheet" type="text/css" href="../Style/Achat/Cursor.css">
+    <link rel="stylesheet" type="text/css" href="../Style/Achat/Achat.css">
 </head>
     <body>
         <header>

@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../Style/Header_Footer.css">
     <link rel="stylesheet" type="text/css" href="../Style/Autres/Autres.css">
 </head>
-    <body>
+    <body style=" background: url('../Photos/Autres/Fond.jpg') ">
         <!--Header-->
         <header>
             <span>
@@ -35,7 +35,7 @@
                 </div>
             </span>
         </header>
-
+        <div class="body"> </div>
         <span style="text-align: center ">
         <p>
         <h1>liste des utilisateurs du site </h1>

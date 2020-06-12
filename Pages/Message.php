@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Message</title>
     <link rel="stylesheet" type="text/css" href="../Style/Header_Footer.css">
-    <link rel="stylesheet" type="text/css" href="../Style/message.css">
+    <link rel="stylesheet" type="text/css" href="../Style/Message/Message.css">
 </head>
     <body>
         <!--Header-->
