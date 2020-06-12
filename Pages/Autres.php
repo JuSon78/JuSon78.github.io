@@ -87,6 +87,8 @@
                         echo 'utilisateur a été ajouté';
                     else
                         echo 'Erreur';
+
+                unset($_POST['pseudo']);
                 }
                 catch (PDOException $e) {
                     echo $e;
@@ -105,15 +107,16 @@
                         echo 'L\'utilisateur ' . $suppression_pseudo . ' a été supprimé';
                     else
                         echo 'L\'utilisateur ' . $suppression_pseudo . ' n\'existe pas';
+
+                unset($_POST['pseudo']);
                 }
                 catch (PDOException $e) {
                     echo $e;
                 }
             }
-            else
-                echo 'Erreur';
             ?>
         </p>
+        <br>
 
 
             <?php include"../Style/Footer.php" ?>

@@ -32,7 +32,7 @@
             <p> <label> Mot de passe :</label> <br>
                 <input type="text" placeholder="Entrez votre mot de passe" name="password"> </p>
 
-            <p> <input class="input_Enregistrer" type="submit" value="Ajouter">
+            <p> <input class="input_Enregistrer" type="submit" value="S'inscrire">
         </form>
         <p> si vous avez déjà un compte veuillez vous  <a href="Page_connecter.php" id="redirection">connecter</a>
         </p>
@@ -40,6 +40,11 @@
 
         <p>
             <?php
+            define('HOST','127.0.0.1');
+            define('DB_name','Site_Web');
+            define('USER','root');
+            define('PASS','root');
+
             if (isset($_POST['pseudo'])) {
                 try{
                     $pseudo = $_POST['pseudo'];
@@ -53,6 +58,8 @@
                         echo 'utilisateur a été ajouté';
                     else
                         echo 'Erreur';
+
+                unset($_POST['pseudo']);
                 }
                 catch (PDOException $e) {
                     echo $e;
