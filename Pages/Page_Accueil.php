@@ -48,7 +48,6 @@
                     Bref..Je t'aime
                 </p>
             </div>
-
         </div>
 
         <!--Information en bas-->

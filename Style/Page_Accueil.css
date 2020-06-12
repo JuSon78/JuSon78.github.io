@@ -1,4 +1,4 @@
-Body {
+body {
     margin: 0;
     padding: 0;
     background: #313131;
@@ -8,6 +8,14 @@ Body {
     height:  800px;
     background: url("../Photos/Album_Photos/07_03_2020/Rue_Chartres.png");
     animation: slide 20s infinite;
+}
+
+.Text-box {
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: #f1f1f1;
 }
 
 @keyframes slide {
@@ -24,20 +32,4 @@ Body {
         background: url("../Photos/Album_Photos/07_03_2020/Rue_Chartres.png") ;
     }
 
-}
-
-.Text-box{
-    width: 600px;
-    position: absolute;
-    top: 200px;
-    left: 100px;
-    color: #ffffff;
-}
-.Text-box h1 {
-    margin-bottom: 40px;
-}
-.Text-box p{
-    font-size: 20px;
-    line-height: 18px;
-    margin-top: 80px;
 }

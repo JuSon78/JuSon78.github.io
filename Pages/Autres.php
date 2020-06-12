@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Message</title>
     <link rel="stylesheet" type="text/css" href="../Style/Header_Footer.css">
     <link rel="stylesheet" type="text/css" href="../Style/Autres/Autres.css">
 </head>
-    <p>
+    <body>
         <!--Header-->
         <header>
             <span>
@@ -37,46 +36,88 @@
             </span>
         </header>
 
-    <p>
-    <h1>liste des utilisateurs du site </h1>
-        <?php include"DataBase.php" ?>
-    </p>
+        <span style="text-align: center ">
+        <p>
+        <h1>liste des utilisateurs du site </h1>
+            <?php include"DataBase.php" ?>
+        </p>
+        </span>
 
-    <p>
-    <h1>Ajouter utilisateur</h1>
-    <form method="POST">
-        <label>Pseudo</label> <input type="text" name="pseudo">
-        <label>Email</label> <input type="email" name="email">
-        <label>PassWord</label> <input type="text" name="password">
-        <br>
-        <input type="submit" value="Ajouter">
-    </form>
-    <p>
-        <?php
-        if (isset($_POST['pseudo'])) {
-            try{
-                $pseudo = $_POST['pseudo'];
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-                $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
-                $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $requete='INSERT INTO Site_Web.user (pseudo, email, password) VALUES(\''.$pseudo.'\',\''.$email.'\',\''.$password.'\')';
-                $resultat = $db->exec($requete);
-                if ($resultat)
-                    echo 'utilisateur a été ajouté';
-                else
-                    echo 'Erreur';
+        <span style="text-align: center"
+            <p>
+            <h2> Ajouter utilisateur </h2>
+
+            <form method="POST">
+                <p> <label>Pseudo :</label> <br>
+                    <input type="text" placeholder="Entrez votre nom" name="pseudo"> </p>
+
+                <p> <label>Email :</label> <br>
+                    <input type="email" placeholder="Entrez votre adresse email" name="email"> </p>
+
+                <p> <label> Mot de passe :</label> <br>
+                    <input type="text" placeholder="Entrez votre mot de passe" name="password"> </p>
+
+                <p> <input class="input_Enregistrer" type="submit" value="Ajouter">
+            </form>
+            </p>
+
+            <p>
+            <h2>Supprimer utilisateur</h2>
+            <form method="POST">
+                <p> <label> Pseudo :</label> <br>
+                    <input type="text" placeholder="Entrez le pseudo que vous voulez supprimer"  name="suppression_pseudo"> </p>
+
+                <p> <input class="input_Enregistrer" type="submit" value="Supprimer"> </p>
+            </form>
+        </span>
+
+
+        <p>
+            <?php
+            if (isset($_POST['pseudo'])) {
+                try{
+                    $pseudo = $_POST['pseudo'];
+                    $email = $_POST['email'];
+                    $password = $_POST['password'];
+                    $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
+                    $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $requete='INSERT INTO Site_Web.user (pseudo, email, password) VALUES(\''.$pseudo.'\',\''.$email.'\',\''.$password.'\')';
+                    $resultat = $db->exec($requete);
+                    if ($resultat)
+                        echo 'utilisateur a été ajouté';
+                    else
+                        echo 'Erreur';
+                }
+                catch (PDOException $e) {
+                    echo $e;
+                }
             }
-            catch (PDOException $e) {
-                echo $e;
+
+            if (isset($_POST['suppression_pseudo'])) {
+
+                try {
+                    $suppression_pseudo= $_POST['suppression_pseudo'];
+                    $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
+                    $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $requete='DELETE FROM Site_Web.user WHERE \'pseudo\' =' .$suppression_pseudo;
+                   echo $requete;
+                   $resultat = $db->exec($requete);
+                    if ($resultat)
+                        echo 'utilisateur a été supprimé';
+                    else
+                        echo 'Erreur';
+                }
+                catch (PDOException $e) {
+                    echo $e;
+                }
             }
-        }
-        ?>
-    </p>
+            else
+                echo 'Erreur';
+            ?>
         </p>
 
 
-        <?php include"../Style/Footer.php" ?>
+            <?php include"../Style/Footer.php" ?>
 
     </body>
-</html><?php
+</html>

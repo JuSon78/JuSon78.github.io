@@ -92,7 +92,9 @@ figcaption {
     font-size: .9em;
     color: white;
     background-color: #656464;
-    padding: 1.11em; }
+    padding: 1.11em;
+    text-align: center;
+}
 
 #Suite {
     float: right;
