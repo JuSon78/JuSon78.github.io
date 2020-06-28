@@ -1,6 +1,6 @@
 <!--Information en bas-->
 <footer>
-    <div id="footer">
+    <div id="footer_album">
         <div>
             Propriété de Wilson HUARD et Julien DAURAT<br>
             <small>

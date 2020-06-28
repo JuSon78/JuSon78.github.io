@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        <?php include "../Style/Footer.php" ?>
+        <?php include "../Style/FooterNA.php" ?>
 
     </body>
 </html>

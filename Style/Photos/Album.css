@@ -84,18 +84,6 @@ figcaption {
     color: white;
 }
 
-#footer {
-    margin-top: 3%;
-    column-span: all;
-    width: 100%;
-    clear: both;
-    font-size: .9em;
-    color: white;
-    background-color: #656464;
-    padding: 1.11em;
-    text-align: center;
-}
-
 #Suite {
     float: right;
     font-size: 20px;

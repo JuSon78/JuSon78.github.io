@@ -67,7 +67,7 @@
         </div>
 
 
-        <?php include"../../Style/Photos/Footer_Album.php" ?>
+        <?php include "../../Style/FooterNA.php" ?>
 
     </body>
 </html>
