@@ -10,7 +10,7 @@
         <!--Message-->
         <div class="message">
             <div>
-                <> <b>Info sur cette page: </b>
+                <> <b>Info sur cette æpage: </b>
                 Ce site est en cours de préparation est à but pour pour partager de bons moments et de l'entraînement à la programmation.  Cette page est dédié à l'album photo et à regrouper toutes nos photos
             </div>
         </div>

@@ -34,12 +34,49 @@
         </div>
 
         <!--Photo-->
-        <div style="margin-left: 10%; margin-right: auto; width: 50%; margin-top: 10px">
+        <div style="margin-left: 2%; margin-right: auto; width: 50%; margin-top: 10px">
             <div>
                 <div>
                     <div class="rangement">
                         <figure>
                             <img src="../../Photos/Album_Photos/11_05_2020/Julien_assis.png" alt="Une personne" height="400" width="300">
+                            <figcaption>
+                                <a style="text-decoration: none; color: darkblue" href="11_05_2020.php"> 11/05/2020 </a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="rangement">
+                        <figure>
+                            <img src="../../Photos/Album_Photos/20_05_2020/Julien1_Eau.png" alt="Une personne" height="400" width="300">
+                            <figcaption>
+                                <a style="text-decoration: none; color: darkblue" href="20_05_2020.php"> 20/05/2020 </a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="rangement">
+                        <figure>
+                            <img src="../../Photos/Album_Photos/26_05_2020/Chartres1.png" alt="Maison" height="400" width="300">
+                            <figcaption>
+                                <a style="text-decoration: none; color: darkblue" href="26_05_2020.php"> 26/05/2020 </a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="rangement">
+                        <figure>
+                            <img src="../../Photos/Album_Photos/06_06_2020/Monde2.png" alt="Gens" height="400" width="300">
+                            <figcaption>
+                                <a style="text-decoration: none; color: darkblue" href="06_06_2020.php"> 06/06/2020 </a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="rangement">
+                        <figure>
+                            <img src="../../Photos/Album_Photos/06_06_2020/Monde.png" alt="Une personne" height="400" width="300">
                             <figcaption>
                                 <a style="text-decoration: none; color: darkblue" href="11_05_2020.php"> 11/05/2020 </a>
                             </figcaption>
@@ -57,6 +94,14 @@
                     <div class="rangement">
                         <figure>
                             <img src="../../Photos/Album_Photos/26_05_2020/Chartres1.png" alt="Maison" height="400" width="300">
+                            <figcaption>
+                                <a style="text-decoration: none; color: darkblue" href="26_05_2020.php"> 26/05/2020 </a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="rangement">
+                        <figure>
+                            <img src="../../Photos/Album_Photos/06_06_2020/.Table.HEIC.icloud" alt="Maison" height="400" width="300">
                             <figcaption>
                                 <a style="text-decoration: none; color: darkblue" href="26_05_2020.php"> 26/05/2020 </a>
                             </figcaption>
