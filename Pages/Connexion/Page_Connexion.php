@@ -37,24 +37,48 @@
 
         <p>
             <?php
-            if (isset($_POST['pseudo'])) {
+            define('HOST','127.0.0.1');
+            define('DB_name','Site_Web2');
+            define('USER','root');
+            define('PASS','root');
+
+            try {
+                $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
+                $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $requete = "SELECT * FROM Site_Web2.message";
+                $resultat = $db->query($requete);
                 try{
-                    $pseudo = $_POST['pseudo'];
-                    $email = $_POST['email'];
-                    $password = $_POST['password'];
-                    $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
-                    $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $requete='INSERT INTO Site_Web.user (pseudo, email, password) VALUES(\''.$pseudo.'\',\''.$email.'\',\''.$password.'\')';
-                    $resultat = $db->exec($requete);
-                    if ($resultat)
-                        echo 'utilisateur a été ajouté';
-                    else
-                        echo 'Erreur';
+                    echo("<div id='boxMessages'>");
+                        echo ("<table id='affichageMessages'>");
+
+                        while ($donnees = $resultat->fetch())
+                        {
+                            $dateJour = str_split($donnees['date'],11)[0];
+                            $dateHeure = str_split($donnees['date'],11)[1];
+                            echo ("<tr id='message'>");
+
+                            echo("<td>" . $donnees['utilisateur'] . ": </td>");
+                            echo("<td>" . $donnees['contenu_message'] ."</td>");
+                            echo("<td> le "  . $dateJour . " à " . $dateHeure . "</td>");
+                            echo ("</tr>");
+
+                        }
+                        echo ("</table>");
+                        echo("<form id='formulaire_message' method=\"POST\">
+                                <input id='champ_message' type=\"text\" placeholder=\"Tapez ici votre message\" name=\"message\">
+                                </br>
+                                <input id='bouton_submit_message' type=\"submit\" value=\"Envoyer\">
+                            </form>");
+                    echo("</div>");
                 }
-                catch (PDOException $e) {
+                catch (Exception $e){
                     echo $e;
                 }
+            } catch (PDOException $e){
+
+                echo $e ->getMessage();
             }
+
             ?>
         </p>
 
