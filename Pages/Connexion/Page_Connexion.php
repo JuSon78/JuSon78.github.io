@@ -17,7 +17,7 @@
                     </span>
         </header>
         <div class="body"> </div>
-
+        <!--
         <span style="text-align: center"
         <p>
         <h2> S'inscrire </h2>
@@ -33,7 +33,7 @@
             <p> <a href="Page_connecter.php"> <bouton class="input_Enregistrer"> Se connecter </bouton> </a>
         </form>
         </span>
-
+-->
 
         <p>
             <?php
@@ -42,13 +42,18 @@
             define('USER','root');
             define('PASS','root');
 
-            try {
-                $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
-                $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $requete = "SELECT * FROM Site_Web2.message";
-                $resultat = $db->query($requete);
-                try{
-                    echo("<div id='boxMessages'>");
+
+            // DEMARRAGE DE LA SESSION
+            session_start();
+            if (isset($_SESSION['pseudo'])){ // SI UN PSEUDO EST DEJA DEFINI
+                $pseudo = $_SESSION['pseudo'];
+                try {
+                    $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
+                    $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $requete = "SELECT * FROM Site_Web2.message";
+                    $resultat = $db->query($requete);
+                    try{
+                        echo("<div id='boxMessages'>");
                         echo ("<table id='affichageMessages'>");
 
                         while ($donnees = $resultat->fetch())
@@ -64,24 +69,64 @@
 
                         }
                         echo ("</table>");
+                        echo("<div style='text-align: center'>Pseudo: ". $pseudo."</div>");
                         echo("<form id='formulaire_message' method=\"POST\">
-                                <input id='champ_message' type=\"text\" placeholder=\"Tapez ici votre message\" name=\"message\">
+                                <input id='champ_message' type=\"textarea\" placeholder=\"Tapez ici votre message\" name=\"message\">
                                 </br>
                                 <input id='bouton_submit_message' type=\"submit\" value=\"Envoyer\">
                             </form>");
-                    echo("</div>");
+                        echo("</div>");
+                    }
+                    catch (Exception $e){
+                        echo $e;
+                    }
+                } catch (PDOException $e){
+
+                    echo $e ->getMessage();
                 }
-                catch (Exception $e){
+            }
+            else{
+                if(isset($_POST['pseudo'])){
+                    $_SESSION['pseudo'] = $_POST['pseudo'];
+                }
+                else{
+                    echo("<form id='formulaire_message' method=\"POST\">
+                                <input id='champ_pseudo' type=\"text\" placeholder=\"Tapez ici votre pseudo\" name=\"pseudo\">
+                                </br>
+                                <input id='bouton_submit_message' type=\"submit\" value=\"Envoyer\">
+                            </form>");
+                }
+            }
+
+
+
+            // SI LE MESSAGE EST ENTRE
+            if (isset($_POST['message'])) {
+                try{
+                    $message = $_POST['message'];
+                    $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
+                    $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $requete= 'INSERT INTO Site_Web2.message (utilisateur, contenu_message) VALUES(\''.$pseudo .'\',\''.$message.'\')';
+                    $resultat = $db->exec($requete);
+                    if ($resultat)
+                        header("Refresh:0");
+                    else
+                        echo 'Erreur';
+
+                    unset($_POST['message']);
+                }
+                catch (PDOException $e) {
                     echo $e;
                 }
-            } catch (PDOException $e){
-
-                echo $e ->getMessage();
             }
 
             ?>
         </p>
 
+        <script>
+            element = document.getElementById('affichageMessages');
+            element.scrollTop = element.scrollHeight;
+        </script>
 
         <?php include "../../Style/Connexion/Footer_Connexion.php" ?>
 

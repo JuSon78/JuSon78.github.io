@@ -34,18 +34,21 @@ label {
     padding: 5px 5px 5px 5px;
     border: 2px solid black;
     width: 80%;
+    height: 70%;
     border-radius: 5px;
     background-color: white;
 }
 
 #affichageMessages{
+    display:block;
     align-content: center;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
-    margin: auto;
+    margin: 0px 10px 0px 10px;
     padding: 5px 5px 5px 5px;
-    width: 90%;
+    height: 200px;
+    overflow : auto;
 }
 
 #formulaire_message{
@@ -54,16 +57,19 @@ label {
 }
 
 td{
-    border-bottom:1px dashed grey;
-    padding-bottom: 5px;
+    border-bottom:1px dashed lightgray;
 }
 
 td:last-child {
     text-align: right;
+    width: 165px;
+}
+
+tr:last-child{
+    border-bottom:none;
 }
 
 #champ_message{
-    width: 60%;
-    margin-top: 20px;
+    width: 80%;
     margin-bottom: 5px;
 }
