@@ -1,3 +1,8 @@
+<?php
+// DEMARRAGE DE LA SESSION
+session_start();
+?>
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -37,20 +42,24 @@
 
         <p>
             <?php
-            define('HOST','127.0.0.1');
+            // CONFIG LOCALE
+            /*define('HOST','127.0.0.1');
             define('DB_name','Site_Web2');
             define('USER','root');
-            define('PASS','root');
+            define('PASS','root');*/
 
+            $servername = "localhost";
+            $username = "id14239712_juson";
+            $password = "Wilson-le-plus-beau78";
+            $database = "id14239712_site_web";
 
-            // DEMARRAGE DE LA SESSION
-            session_start();
             if (isset($_SESSION['pseudo'])){ // SI UN PSEUDO EST DEJA DEFINI
                 $pseudo = $_SESSION['pseudo'];
                 try {
-                    $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
-                    $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $requete = "SELECT * FROM Site_Web2.message";
+                    $db = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+                    // set the PDO error mode to exception
+                    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $requete = "SELECT * FROM id14239712_site_web.message";
                     $resultat = $db->query($requete);
                     try{
                         echo("<div id='boxMessages'>");
@@ -104,8 +113,9 @@
             if (isset($_POST['message'])) {
                 try{
                     $message = $_POST['message'];
-                    $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
-                    $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $db = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+                    // set the PDO error mode to exception
+                    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     $requete= 'INSERT INTO Site_Web2.message (utilisateur, contenu_message) VALUES(\''.$pseudo .'\',\''.$message.'\')';
                     $resultat = $db->exec($requete);
                     if ($resultat)
@@ -127,8 +137,6 @@
             element = document.getElementById('affichageMessages');
             element.scrollTop = element.scrollHeight;
         </script>
-
-        <?php include "../../Style/Connexion/Footer_Connexion.php" ?>
 
     </body>
 </html>
