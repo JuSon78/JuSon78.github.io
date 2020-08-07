@@ -10,8 +10,10 @@
 #Bande2 {
     background-color: #313131;
     border-color: #dfdfdf;
+    overflow: hidden;
     width: 100%;
-    height: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #Logo {
@@ -60,22 +62,24 @@ REND L'INTERFACE RESPONSIVE (S'ADAPTE ET MODIFIE EN FONCTION DE LA TAILLE ECRAN)
     }
 }
 
-.elementList:hover {
+#Bande .elementList:hover {
     background-color: #D3D3D3;
     border-color: #696969 #696969;
-    padding: 5px;
+}
+
+#Bande2 .elementList:hover {
+    background-color: lightgray;
+    border-color: #696969 #696969;
 }
 
 #footerNA {
     width: 100%;
-    bottom:0;
-    column-span: all;
-    clear: both;
     font-size: .9em;
-    color: #2b2b2b;
+    display: inline-flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0;
     background-color: #cdcbcb;
-    padding: 1.11em;
-    text-align: center;
 }
 #footer {
     width: 100%;
@@ -128,4 +132,38 @@ REND L'INTERFACE RESPONSIVE (S'ADAPTE ET MODIFIE EN FONCTION DE LA TAILLE ECRAN)
 
 .logo_reseaux_sociaux{
     text-decoration: none;
+}
+
+#logo_deconnexion{
+    width: 20px;
+    height: 20px;
+    float: right;
+    padding: 5px;
+}
+
+/*
+UNIQUEMENT POUR LE HEADER NORMAL (PAS LE NOIR)
+ */
+#Bande #logo_deconnexion:hover{
+    background-color: lightgray;
+}
+
+/*
+UNIQUEMENT POUR LE HEADER NOIR
+ */
+#Bande2 #logo_deconnexion:hover{
+    background-color: gray;
+}
+
+#user_menu{
+    float: right;
+    display: inline;
+    text-align: center;
+    text-transform: uppercase;
+    color: gray;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 10px;
 }

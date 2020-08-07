@@ -37,6 +37,10 @@ session_start();
 
 <?php
     include 'Fonctions_DB.php';
+    if(isset($_GET['deconnexion'])){
+        session_unset();
+        header("location:Connexion.php");
+    }
 
     if(isset($_SESSION['username'])){
         echo "Vous êtes déjà connecté ! Vous allez être redirigé automatiquement vers la page d'accueil.";

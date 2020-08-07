@@ -9,48 +9,7 @@
 </head>
     <body>
         <!--Header-->
-        <header>
-                <span>
-                    <div id="Bande">
-                        <span>
-                         <a href="Page_Accueil.php"> <img src="../Photos/Logo/Coeur.png" height="40" width="60" id="Logo" alt="Logo"> </a>
-                        </span>
-
-                        <span>
-                            <div>
-                                 <ul id="liste">
-                                   <li> <a class="elementList" href="Calendrier.php">Calendrier </a>
-                                        </li>
-                                    <li> <a class="elementList" href="Album_Photo.php">Photos </a>
-                                        </li>
-                                    <li> <a class="elementList" href="Liste_Courses.php"> Liste Course </a>
-                                        </li>
-                                    <li> <a class="elementList" href="Achat.php">Achat </a>
-                                        </li>
-                                    <li> <a class="elementList" href="Message.php">Message </a>
-                                        </li>
-                                    <li> <a class="elementList" href="Autres.php">Autres </a>
-                                        </li>
-                                     <?php
-                                     if(isset($_SESSION['username'])){
-                                         $user = $_SESSION['username'];
-                                         echo "<li id='user_menu'>$user</li>";
-                                     }
-                                     else{
-                                         echo "<li> <a class=\"elementList\" href=\"Connexion/Connexion.php\">Connexion</a>
-                                        </li>";
-                                     }
-                                     ?>
-                                </ul>
-                            </div>
-                        </span>
-                    </div>
-                </span>
-        </header>
-
-        <?php
-        session_start();
-        ?>
+        <?php include"../Style/Header.php" ?>
 
         <div style="margin-left: 22px">
         <p><b>Ecrire à un ami:</b></p>
@@ -87,7 +46,6 @@
             <br clear="both" />
         </div>
         </body>
-</html>
 
         <?php include"../Style/Footer.php" ?>
 
