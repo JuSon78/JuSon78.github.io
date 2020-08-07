@@ -1,8 +1,8 @@
 #Bande {
     background-color: #efefef;
     border-color: #dfdfdf;
+    overflow: hidden;
     width: 100%;
-    height: 60px;
 }
 #Bande2 {
     background-color: #313131;
@@ -14,7 +14,7 @@
 #Logo {
     margin-left: 30px;
     padding-top: 10px;
-    margin-right: 50px;
+    margin-right: 20px;
     float: left;
 }
 
@@ -27,14 +27,33 @@
 }
 
 .elementList {
-    margin-left:3px;
+    width: 12.5%;
     float: left;
     font-size: 25px;
-    padding: 5px;
-    margin-right: 8%;
     color: grey;
     text-decoration:none;
+    text-align: center;
+    line-height: 25px;
     border-radius: 10px 100px / 120px;
+}
+
+/*
+REND L'INTERFACE RESPONSIVE (S'ADAPTE ET MODIFIE EN FONCTION DE LA TAILLE ECRAN)
+ */
+@media screen and (max-width: 880px) {
+    .elementList {
+        float: none;
+        font-size: 25px;
+        display: block;
+        text-align: left;
+        border-radius: 0;
+    }
+
+    .elementList:hover {
+        background-color: #D3D3D3;
+        border-color: #696969 #696969;
+        padding-left: 5px;
+    }
 }
 
 .elementList:hover {
@@ -55,17 +74,25 @@
     text-align: center;
 }
 #footer {
-    margin-top: 10%;
-    position: absolute;
     width: 100%;
-    bottom:0;
-    column-span: all;
-    clear: both;
     font-size: .9em;
-    color: #2b2b2b;
     background-color: #cdcbcb;
-    padding: 1.11em;
+    display: inline-flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#div_propriete_footer{
     text-align: center;
+    display: inline;
+    width: 100%;
+    margin: 5px;
+}
+
+#div_reseaux_sociaux_footer{
+    display: inline;
+    min-width: 160px;
+    margin: 5px;
 }
 
 #footer2 {
@@ -93,4 +120,6 @@
     text-align: center;
 }
 
-
+.logo_reseaux_sociaux{
+    text-decoration: none;
+}
