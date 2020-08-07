@@ -31,6 +31,16 @@
                                         </li>
                                     <li> <a class="elementList" href="Autres.php">Autres </a>
                                         </li>
+                                     <?php
+                                     if(isset($_SESSION['username'])){
+                                         $user = $_SESSION['username'];
+                                         echo "<li id='user_menu'>$user</li>";
+                                     }
+                                     else{
+                                         echo "<li> <a class=\"elementList\" href=\"Connexion/Connexion.php\">Connexion</a>
+                                        </li>";
+                                     }
+                                     ?>
                                 </ul>
                             </div>
                         </span>
@@ -42,9 +52,6 @@
         session_start();
         ?>
 
-        <?php
-        include 'Header.php';
-        ?>
         <div style="margin-left: 22px">
         <p><b>Ecrire à un ami:</b></p>
         <form action="Message.php" method="POST">
