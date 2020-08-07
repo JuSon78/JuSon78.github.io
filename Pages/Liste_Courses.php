@@ -5,7 +5,7 @@
     <title>Courses</title>
     <link rel="stylesheet" type="text/css" href="../Style/Header_Footer.css">
 </head>
-    <body>
+    <body style="margin: 0">
         <!--Header-->
         <header>
                     <span>
