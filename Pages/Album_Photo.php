@@ -10,6 +10,7 @@
         <!--Header-->
         <?php include"../Style/Header.php" ?>
 
+        <div style="padding-left: 10px"
         <!--Message-->
         <div class="message" STYLE="padding-top: 20px">
             <div>
@@ -23,6 +24,8 @@
             Découvrez nos superbes photos pleins de souvenirs afin de se mémorer ou se re-mémorer ces moments. Déjà pleins d'évènements s'est passé et encore d'autre se passeront.
             Alors si tu es prêt je te laisse parcourir ce site avec plaisir ! Bon visionnage.
         </p>
+
+        </div
 
         <!--Menu à droit-->
         <div id="rubrique">

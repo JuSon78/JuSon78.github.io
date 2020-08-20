@@ -7,18 +7,19 @@
     <link rel="stylesheet" type="text/css" href="../Style/Calendrier/Calendrier.css">
 </head>
     <body>
-    <!--Header-->
-    <?php include"../Style/Header.php" ?>
+        <!--Header-->
+        <?php include"../Style/Header.php" ?>
 
-        <h1> Calendrier où on mettra nos planning</h1>
-        <p> Par exemple quand est-ce que nous sommes chez l'un ou l'autre ou des rendez-vous important etc.. Puis comme ça même
-            si on a un doute on peut vérifier ici pour nous aussi </p>
+        <div style="padding-left: 10px">
+            <h1> Calendrier où on mettra nos planning</h1>
+            <p> Par exemple quand est-ce que nous sommes chez l'un ou l'autre ou des rendez-vous important etc.. Puis comme ça même
+                si on a un doute on peut vérifier ici pour nous aussi </p>
 
-        <h1> WhishList </h1>
-        <p> Ici on peut faire comme un barre où on insère du caractère et ça serai retranscris en liste comme un wish liste mais
-            des activités que l'on voudrais ensemble sans forcément dire quand et comment mais juste des idées. <br>
-            Avec des boutons qui ferai "Ajouter" "Modifier" "Supprimer". </p>
-
+            <h1> WhishList </h1>
+            <p> Ici on peut faire comme un barre où on insère du caractère et ça serai retranscris en liste comme un wish liste mais
+                des activités que l'on voudrais ensemble sans forcément dire quand et comment mais juste des idées. <br>
+                Avec des boutons qui ferai "Ajouter" "Modifier" "Supprimer". </p>
+        </div>
          <?php include"../Style/Footer.php" ?>
 
 
