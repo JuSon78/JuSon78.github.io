@@ -11,12 +11,12 @@
         <header>
             <!--Header-->
             <?php include"../Style/Header.php" ?>
-
-        <h1> WhishList </h1>
-        <p> Ici un peu comme le calendrier on peut faire comme un barre où on insère du caractère et ça serai retranscris en liste comme un wish liste mais
-            des choses que l'on voudrais acheter sans forcément dire quand et comment mais juste des idées. <br>
-            Avec des boutons qui ferai "Ajouter" "Modifier" "Supprimer". </p>
-
+        <div style="padding-left: 10px">
+            <h1> WhishList </h1>
+            <p> Ici un peu comme le calendrier on peut faire comme un barre où on insère du caractère et ça serai retranscris en liste comme un wish liste mais
+                des choses que l'on voudrais acheter sans forcément dire quand et comment mais juste des idées. <br>
+                Avec des boutons qui ferai "Ajouter" "Modifier" "Supprimer". </p>
+        </div>
         <?php include "../Style/Footer.php" ?>
 
     </body>
