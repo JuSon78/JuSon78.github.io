@@ -1,3 +1,4 @@
+
 #menu_header {
     list-style-type: none;
     margin: 0;
@@ -89,7 +90,7 @@
     margin:0;
     padding:0;
 }
-s
+
 table {
     border-collapse:collapse;
     width:70%;
@@ -126,5 +127,43 @@ input {
 label {
     width: 20%;
     padding: 5px;
-    padding-right: 120px;
+}
+#Connexion {
+    font: 40px Jazz LET, fantasy;
+}
+#Inscription {
+    font: 40px Jazz LET, fantasy;
+}
+
+#submit {
+    background-color: #ADADAD;
+}
+.container {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    background-color: #D3D3D3;
+    overflow: hidden;
+}
+.container .text {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    font-family: Georgia;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 30%;
+    color: white;
+    width: 70%;
+}
+.text {
+    Background-color: #D3D3D3;
+    text-align: center;
+    padding: 1%;
+}
+.ConnInsc {
+    padding: 0;
+    margin: 0;
 }

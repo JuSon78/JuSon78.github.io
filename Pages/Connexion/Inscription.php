@@ -7,40 +7,49 @@ session_start();
     <meta charset="UTF-8">
     <title>Inscription</title>
     <link rel="stylesheet" type="text/css" href="../../Style/Header_Footer.css">
+    <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
-<body>
+<body class="ConnInsc">
     <header>
         <?php include"../../Style/Header_Inscription.php" ?>
     </header>
-    <h1>Inscription</h1>
-        <form action="Inscription.php" method="POST">
-            <p>
-                <label>Nom d'utilisateur</label>
-                <input name='username' type="text" required>
-            </p>
-            <p>
-                <label>Adresse email</label>
-                <input name='email' type="email" required>
-            </p>
-            <p>
-                <label>Mot de passe</label>
-                <input name='password' type="password" minlength="3" required>
-                <label>Repeter le mot de passe</label>
-                <input name='repeat_password' type="password" minlength="3" required>
-            </p>
-            <input id='submit' type="submit" value="S'inscrire">
-            <?php
-            if(isset($_GET['erreur'])){
-                $err = $_GET['erreur'];
-                if($err==1)
-                    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                else if($err==2)
-                    echo "<p style='color:red'>Le mot de passe entré dans les 2 champs est différent </p>";
-                else if($err==3)
-                    echo "<p style='color:red'>Le nom d'utilisateur est déjà utilisé</p>";
-            }
-            ?>
-        </form>
+
+        <span>
+            <div class="container">
+                <img style="width:100%; height: 400px" src="../../Photos/Logo/Page_Connexion.jpeg"  alt="CDA cabinet">
+                 <div style="text-align: center">
+                    <h1 id="Inscription"> Inscription</h1>
+                    <form action="Inscription.php" method="POST">
+                        <p>
+                            <label>Nom d'utilisateur</label>
+                            <input name='username' type="text" required>
+                        </p>
+                        <p>
+                            <label>Adresse email</label>
+                            <input name='email' type="email" required>
+                        </p>
+                        <p>
+                            <label>Mot de passe</label>
+                            <input name='password' type="password" minlength="3" required>
+                            <label>Repeter le mot de passe</label>
+                            <input name='repeat_password' type="password" minlength="3" required>
+                        </p>
+                        <input id='submit' type="submit" value="S'inscrire">
+                        <?php
+                        if(isset($_GET['erreur'])){
+                            $err = $_GET['erreur'];
+                            if($err==1)
+                                echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                            else if($err==2)
+                                echo "<p style='color:red'>Le mot de passe entré dans les 2 champs est différent </p>";
+                            else if($err==3)
+                                echo "<p style='color:red'>Le nom d'utilisateur est déjà utilisé</p>";
+                        }
+                        ?>
+                    </form>
+                 </div>
+            </div>
+        </span>
 </body>
 
     <?php

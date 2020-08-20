@@ -10,7 +10,7 @@
 <div>
     <!--Par rapport à .js class="title" c'est le père, et les autres vont être les fils-->
     <div class="title">
-        <a class="title" href="Pages/Connexion/Page_Connexion.php">
+        <a class="title" href="Pages/Connexion/Connexion.php">
             <span> <span> Bienvenue </span> </span> <span> <span> sur </span> </span>  </br>
             <span> <span> le </span> </span> <span> <span> site </span> </span>
             <span> <span> de </span> </span> <span> <span> Wilson </span> </span>
