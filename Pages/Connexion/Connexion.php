@@ -7,33 +7,34 @@ session_start();
     <meta charset="UTF-8">
     <title>Connexion</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="../../Style/Header_Footer.css">
 </head>
-<body>
-<header>
+    <body>
+        <header>
+            <!--Header-->
+            <?php include"../../Style/Header_Connexion.php" ?>
+        </header>
+        <h1>Connexion</h1>
+        <form method="POST">
+            <p>
+                <label>Nom d'utilisateur</label>
+                <input name='username' type="text" required>
+            </p>
+            <p>
+                <label>Mot de passe</label>
+                <input name='password' type="password" minlength="3" required>
 
-    <a href='Inscription.php'><span>Inscription</span></a>
-</header>
-<h1>Connexion</h1>
-    <form method="POST">
-        <p>
-            <label>Nom d'utilisateur</label>
-            <input name='username' type="text" required>
-        </p>
-        <p>
-            <label>Mot de passe</label>
-            <input name='password' type="password" minlength="3" required>
-
-        </p>
-        <input id='submit' type="submit" value="Se connecter">
-        <?php
-        if(isset($_GET['erreur'])){
-            $err = $_GET['erreur'];
-            if($err==1)
-                echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-        }
-        ?>
-    </form>
-</body>
+            </p>
+            <input id='submit' type="submit" value="Se connecter">
+            <?php
+            if(isset($_GET['erreur'])){
+                $err = $_GET['erreur'];
+                if($err==1)
+                    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+            }
+            ?>
+        </form>
+    </body>
 
 <?php
     include 'Fonctions_DB.php';
