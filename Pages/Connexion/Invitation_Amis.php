@@ -1,6 +1,8 @@
 <?php
 session_start();
 ?>
+ // TODO: MODIFIER INVITATION AMIS : INVITATION EN DOUBLE -> VERIF SI DEJA AMI OU AUTRE...
+
     <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
