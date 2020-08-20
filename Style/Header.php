@@ -15,8 +15,6 @@
                         </li>
                     <li> <a class="elementList" href="Album_Photo.php">Photos </a>
                         </li>
-                    <li> <a class="elementList" href="Liste_Courses.php"> Liste Course </a>
-                        </li>
                     <li> <a class="elementList" href="Achat.php">Achat </a>
                         </li>
                     <li> <a class="elementList" href="Message.php">Message </a>
