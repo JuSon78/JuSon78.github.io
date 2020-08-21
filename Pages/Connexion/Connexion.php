@@ -71,8 +71,6 @@ session_start();
             else {    // SI LE COUPLE PSEUDO MDP N'EXISTE PAS
                 header('Location: Connexion.php?erreur=1'); // LE COUPLE PSEUDO ET MOT DE PASSE ENTREE EST INCORRECT
             }
-
-
         }
     }
 ?>
