@@ -1,13 +1,12 @@
  <?php
-    define('HOST','127.0.0.1');
-    define('DB_name','Site_Web');
-    define('USER','root');
-    define('PASS','root');
-
+ $servername = "mysql-juson.alwaysdata.net";
+ $database = "juson_messagerie";
+ $db_username = "juson_principal";
+ $db_password = "loluser";
     try {
-        $db = new PDO("mysql:" . HOST . ";dbname" . DB_name, USER, PASS);
+        $db = new PDO("mysql:host=$servername;dbname=$database", $db_username, $db_password);
         $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $requete = "SELECT * FROM Site_Web.user";
+        $requete = "SELECT * FROM user";
         $resultat = $db->query($requete);
         try{
             echo ("<table>");
@@ -23,9 +22,9 @@
                 echo ("<tr>");
 
                 echo("<td>" . $donnees['id'] . "</td>");
-                echo("<td>" . $donnees['pseudo'] . "</td>");
+                echo("<td>" . $donnees['username'] . "</td>");
                 echo("<td>" . $donnees['email'] . "</td>");
-                echo("<td>" . $donnees['date'] . "</td>");
+                echo("<td>" . $donnees['creation_date'] . "</td>");
 
                 echo ("</tr>");
 
