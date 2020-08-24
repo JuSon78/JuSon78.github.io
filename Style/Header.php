@@ -23,14 +23,19 @@
                         </li>
 
                      <?php
-                     if(isset($_SESSION['username'])){
-                         $user = $_SESSION['username'];
+
+                     $user = $_SESSION['username'];
+
+                     droit_admn($user);
+
+
+                     if(isset($user)){
                          echo "<li id='user_menu'>$user</li>";
                      }
                      echo "<a href=\"../Pages/Connexion/Connexion.php?deconnexion\"> <img src=\"../Photos/Logo/logout.png\" id=\"logo_deconnexion\" alt=\"Logo_deconnexion\"> </a>";
                      echo "</ul>";
                      ?>
-            </ul>
+             </ul>
         </div>
     </div>
 </header>
