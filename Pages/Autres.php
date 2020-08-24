@@ -1,15 +1,3 @@
-<?php
-session_start();
-
-include 'Connexion/Fonctions_DB.php';
-if (!droit_admin($_SESSION['username'])) {
-    echo "Vous n'avez pas les droits !";
-    header( "refresh:3;url=Page_Accueil.php" );
-    return false;
-}
-
-?>
-
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -19,7 +7,15 @@ if (!droit_admin($_SESSION['username'])) {
 </head>
     <body style=" background: url('../Photos/Autres/Fond.jpg') ">
     <!--Header-->
-    <?php include"../Style/Header.php" ?>
+    <?php
+    include"../Style/Header.php";
+    if (!droit_admin($_SESSION['username'])) {
+        echo "Vous n'avez pas les droits !";
+        header( "refresh:3;url=Page_Accueil.php" );
+        return false;
+    }
+    ?>
+
 
         <div class="body"> </div>
         <span style="text-align: center ">
