@@ -38,7 +38,7 @@
 <script type="text/javascript">
     function filtre_autre()
     {
-        alert("Hello! I am an alert box!!");
-
+        var username = document.getElementById("user_menu").innerText;
+        alert(username);
     }
 </script>
