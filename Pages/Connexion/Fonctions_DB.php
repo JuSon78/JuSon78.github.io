@@ -320,12 +320,13 @@ function droit_admin(String $user_connexion){
             $requete->bindParam('user_connexion', $user_connexion);
 
 
-            $requete->exectue();
+            $requete->execute();
+
             if ($requete==1) {
-                header('Location: ../Autres.php');
+               return true;
             }
             else {
-                echo"Vous n'avez pas les droits d'accès";
+                return false;
             }
         }
         catch (PDOException $e) {
