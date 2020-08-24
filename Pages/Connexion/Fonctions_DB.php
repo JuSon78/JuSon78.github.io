@@ -307,4 +307,16 @@ function recup_liste_invitations_envoyees_a_confirmer(int $user_id){
         echo $e;
     }
 }
+
+//Autres Administration
+
+function droit_admn(String $droit_admn){
+        try{
+
+        }
+        catch {
+
+        }
+}
+
 ?>
