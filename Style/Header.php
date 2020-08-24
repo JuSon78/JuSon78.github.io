@@ -15,19 +15,22 @@
                         </li>
                    <li> <a class="elementList" href="Album_Photo.php">Photos </a>
                         </li>
-                    <li> <a class="elementList" href="Achat.php">Achat </a>
+                   <li> <a class="elementList" href="Achat.php">Achat </a>
                         </li>
-                    <li> <a class="elementList" href="Message.php">Message </a>
-                        </li>
-                    <li> <a class="elementList" href="Autres.php">Autres </a>
+                   <li> <a class="elementList" href="Message.php">Message </a>
                         </li>
 
-                     <?php
-                     include '../Pages/Connexion/Fonctions_DB.php';
+                   <?php
+                   include '../Pages/Connexion/Fonctions_DB.php';
 
-                     $user = $_SESSION['username'];
+                   $user = $_SESSION['username'];
 
-                     droit_admin($user);
+                   droit_admin($user);
+                        if (droit_admin($user)) {
+                            echo"<li> <a class=\"elementList\" href=\"Autres.php\">Autres </a>
+                        </li>";
+                        }
+
 
 
                      if(isset($user)){
