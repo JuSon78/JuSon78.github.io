@@ -35,7 +35,7 @@
             <?php
 
             if (isset ($_POST['suppression_utilisateur'])) {
-                suppression_utilisateur($_POST['suppression_utilisateur']);
+                Supprimer_utilisateur($_POST['suppression_utilisateur']);
 
             }
             ?>
