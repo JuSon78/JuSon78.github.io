@@ -314,7 +314,7 @@ function droit_admin(String $user_connexion){
 
         try{
 
-            $requete = $db ->prepare("SELECT `admin_right` FROM `user` WHERE `username`= :user_connexion ");
+            $requete = $db ->prepare("SELECT `admin_right` FROM `user` WHERE `username`= :user_connexion AND `admin_right` = 1");
 
             $requete->bindParam('user_connexion', $user_connexion);
 
