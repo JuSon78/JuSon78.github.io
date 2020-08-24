@@ -312,24 +312,24 @@ function recup_liste_invitations_envoyees_a_confirmer(int $user_id){
 function droit_admin(String $user_connexion){
         $db = $GLOBALS['db'];
 
-        try{
+    try{
 
-            $requete = $db ->prepare("SELECT `admin_right` FROM `user` WHERE `username`= :user_connexion AND `admin_right` = 1");
+        $requete = $db ->prepare("SELECT `admin_right` FROM `user` WHERE `username`= :user_connexion AND `admin_right` = 1");
 
-            $requete->bindParam('user_connexion', $user_connexion);
+        $requete->bindParam('user_connexion', $user_connexion);
 
-            $requete->execute();
+        $requete->execute();
 
-            if ($requete->rowCount()==1) {
-               return true;
-            }
-            else {
-                return false;
-            }
+        if ($requete->rowCount()==1) {
+           return true;
         }
-        catch (PDOException $e) {
-            echo $e;
+        else {
+            return false;
         }
+    }
+    catch (PDOException $e) {
+        echo $e;
+    }
 }
 
 ?>

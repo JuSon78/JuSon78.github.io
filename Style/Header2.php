@@ -19,16 +19,26 @@
                 </li>
                 <li> <a class="elementList" href="Message.php">Message </a>
                 </li>
-                <li> <a class="elementList" href="Autres.php">Autres </a>
-                </li>
-                <?php
-                if(isset($_SESSION['username'])){
-                    $user = $_SESSION['username'];
-                    echo "<li id='user_menu'>$user</li>";
-                }
-                echo "<a href=\"../Pages/Connexion/Connexion.php?deconnexion\"> <img src=\"../Photos/Logo/logout.png\" id=\"logo_deconnexion\" alt=\"Logo_deconnexion\"> </a>";
-                echo "</ul>";
-                ?>
+
+               <?php
+               include '../Pages/Connexion/Fonctions_DB.php';
+
+               $user = $_SESSION['username'];
+
+               if (droit_admin($user)) {
+                   echo"<li> <a class=\"elementList\" href=\"Autres.php\">Autres </a>
+               </li>";
+               }
+
+
+
+               if(isset($_SESSION['username'])){
+                   $user = $_SESSION['username'];
+                   echo "<li id='user_menu'>$user</li>";
+               }
+               echo "<a href=\"../Pages/Connexion/Connexion.php?deconnexion\"> <img src=\"../Photos/Logo/logout.png\" id=\"logo_deconnexion\" alt=\"Logo_deconnexion\"> </a>";
+               echo "</ul>";
+               ?>
             </ul>
         </div>
     </div>

@@ -1,3 +1,12 @@
+<?php
+include 'Connexion/Fonctions_DB.php';
+if (!droit_admin($user)) {
+    echo"Vous n'avez pas les droits";
+    return false;
+}
+
+?>
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
