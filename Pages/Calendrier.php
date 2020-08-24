@@ -14,16 +14,16 @@
             <form method="POST">
                 <p>
                     <label>Titre</label>
-                    <input name='titre' type="text" required>
+                    <input name='titre' type="text" placeholder="Nom de l'activité" required>
                 </p>
                 <p>
                     <label>Lieu</label>
-                    <input name='lieu' type="text" required>
+                    <input name='lieu' type="text" placeholder="Lieu de l'activité" required>
 
                 </p>
                 <p>
                     <label>Description</label>
-                    <input name='description' type="text" required>
+                    <input name='description' type="text" placeholder="Description" required>
 
                 </p>
                 <p>

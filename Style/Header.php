@@ -21,6 +21,8 @@
                         </li>
                     <li> <a class="elementList" href="Autres.php">Autres </a>
                         </li>
+
+
                      <?php
                      if(isset($_SESSION['username'])){
                          $user = $_SESSION['username'];

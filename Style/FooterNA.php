@@ -8,7 +8,7 @@
                 <a><abbr >WH & JD</abbr><sup>®</sup></a></small>
             Privacy policy <br>
             Created 01 juin 2020;<br>
-            Last update lun. 30 juin. 2020
+            Last update lun. 24 août. 2020
         </div>
         <div id="div_reseaux_sociaux_footer">
             <div>
