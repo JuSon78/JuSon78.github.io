@@ -42,8 +42,8 @@
 
 
     //FONCTION SUPPRIMER UN UTILISATEUR
- function supprimer_utilisateur (String $supprimer_utilisateur) {
-        echo "salut";
+ function suppression_utilisateur (String $supprimer_utilisateur) {
+
         $db = $GLOBALS['db'];
      try {
         $requete = $db->prepare("DELETE FROM `user` WHERE username = :supprimer_utilisateur");
