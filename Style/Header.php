@@ -13,15 +13,14 @@
              <ul id="liste">
                    <li> <a class="elementList" href="Calendrier.php">Calendrier </a>
                         </li>
-                    <li> <a class="elementList" href="Album_Photo.php">Photos </a>
+                   <li> <a class="elementList" href="Album_Photo.php">Photos </a>
                         </li>
                     <li> <a class="elementList" href="Achat.php">Achat </a>
                         </li>
                     <li> <a class="elementList" href="Message.php">Message </a>
                         </li>
-                    <li> <a class="elementList" href="Autres.php" onclick="filtre_autre();return false;">Autres </a>
+                    <li> <a class="elementList" href="Autres.php">Autres </a>
                         </li>
-
 
                      <?php
                      if(isset($_SESSION['username'])){
@@ -35,10 +34,3 @@
         </div>
     </div>
 </header>
-<script type="text/javascript">
-    function filtre_autre()
-    {
-        var username = document.getElementById("user_menu").innerText;
-        alert(username);
-    }
-</script>
