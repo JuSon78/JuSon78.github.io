@@ -23,22 +23,19 @@
                    <?php
                    include '../Pages/Connexion/Fonctions_DB.php';
 
-                   $user = $_SESSION['username'];
+                    $user = $_SESSION['username'];
 
-                   droit_admin($user);
-                        if (droit_admin($user)) {
-                            echo"<li> <a class=\"elementList\" href=\"Autres.php\">Autres </a>
-                        </li>";
-                        }
+                    if (droit_admin($user)) {
+                        echo"<li> <a class=\"elementList\" href=\"Autres.php\">Autres </a>
+                    </li>";
+                    }
 
-
-
-                     if(isset($user)){
-                         echo "<li id='user_menu'>$user</li>";
-                     }
-                     echo "<a href=\"../Pages/Connexion/Connexion.php?deconnexion\"> <img src=\"../Photos/Logo/logout.png\" id=\"logo_deconnexion\" alt=\"Logo_deconnexion\"> </a>";
-                     echo "</ul>";
-                     ?>
+                    if(isset($user)){
+                        echo "<li id='user_menu'>$user</li>";
+                        echo "<a href=\"../Pages/Connexion/Connexion.php?deconnexion\"> <img src=\"../Photos/Logo/logout.png\" id=\"logo_deconnexion\" alt=\"Logo_deconnexion\"> </a>";
+                    }
+                    echo "</ul>";
+                    ?>
              </ul>
         </div>
     </div>

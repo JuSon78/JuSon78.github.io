@@ -309,7 +309,6 @@ function recup_liste_invitations_envoyees_a_confirmer(int $user_id){
 }
 
 //Autres Administration
-
 function droit_admin(String $user_connexion){
         $db = $GLOBALS['db'];
 
@@ -319,10 +318,9 @@ function droit_admin(String $user_connexion){
 
             $requete->bindParam('user_connexion', $user_connexion);
 
-
             $requete->execute();
 
-            if ($requete==1) {
+            if ($requete->rowCount()==1) {
                return true;
             }
             else {
