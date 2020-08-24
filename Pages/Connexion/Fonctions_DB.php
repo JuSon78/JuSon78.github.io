@@ -310,9 +310,20 @@ function recup_liste_invitations_envoyees_a_confirmer(int $user_id){
 
 //Autres Administration
 
-function droit_admin(String $droit_admin){
+function droit_admin(String $user_connexion){
         try{
+            $user = $_SESSION['username'];
+            $requete->prepare("SELECT `admin_right` FROM `user` WHERE `username`= :userconnexion ");
+            $requete->Bindparam('user_connexion', $user);
 
+
+            $requete->exectue();
+            if ($requete==1) {
+                header('Location: ../Autres.php');
+            }
+            else {
+                echo"Vous n'avez pas les droits d'accès";
+            }
         }
         catch (PDOException $e) {
             echo $e;
