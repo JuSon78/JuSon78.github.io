@@ -23,6 +23,7 @@
                         </li>
 
                      <?php
+                     include '../Pages/Connexion/Fonctions_DB.php';
 
                      $user = $_SESSION['username'];
 
