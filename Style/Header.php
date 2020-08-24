@@ -1,4 +1,4 @@
-<header>
+<header onload="initElement();">
     <?php
         session_start();
         if(isset($_GET['deconnexion']) OR !isset($_SESSION['username']))
@@ -19,7 +19,7 @@
                         </li>
                     <li> <a class="elementList" href="Message.php">Message </a>
                         </li>
-                    <li> <a class="elementList" href="Autres.php">Autres </a>
+                    <li> <a class="elementList" href="Autres.php" onclick="filtre_autre();return false;">Autres </a>
                         </li>
 
 
@@ -35,3 +35,10 @@
         </div>
     </div>
 </header>
+<script type="text/javascript">
+    function filtre_autre()
+    {
+        alert("Hello! I am an alert box!!");
+
+    }
+</script>
