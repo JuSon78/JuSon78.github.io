@@ -13,12 +13,22 @@
             <h1>Ajouter une idée d'activité</h1>
             <form method="POST">
                 <p>
-                    <label>Nom d'utilisateur</label>
-                    <input name='username' type="text" required>
+                    <label>Titre</label>
+                    <input name='titre' type="text" required>
                 </p>
                 <p>
-                    <label>Mot de passe</label>
-                    <input name='password' type="password" minlength="3" required>
+                    <label>Lieu</label>
+                    <input name='lieu' type="text" required>
+
+                </p>
+                <p>
+                    <label>Description</label>
+                    <input name='description' type="text" required>
+
+                </p>
+                <p>
+                    <label>Importance</label>
+                    <input name='importance' type="text" required>
 
                 </p>
                 <input id='submit' type="submit" value="Se connecter">
@@ -30,6 +40,13 @@
                 }
                 ?>
             </form>
+            <div class="rating"><!--
+               --><a href="#5" title="Donner 5 étoiles">☆</a><!--
+               --><a href="#4" title="Donner 4 étoiles">☆</a><!--
+               --><a href="#3" title="Donner 3 étoiles">☆</a><!--
+               --><a href="#2" title="Donner 2 étoiles">☆</a><!--
+               --><a href="#1" title="Donner 1 étoile">☆</a>
+            </div>
         </div>
     </body>
     <?php

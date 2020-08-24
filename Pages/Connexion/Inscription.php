@@ -38,9 +38,7 @@ session_start();
                         <?php
                         if(isset($_GET['erreur'])){
                             $err = $_GET['erreur'];
-                            if($err==1)
-                                echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                            else if($err==2)
+                            if($err==2)
                                 echo "<p style='color:red'>Le mot de passe entré dans les 2 champs est différent </p>";
                             else if($err==3)
                                 echo "<p style='color:red'>Le nom d'utilisateur est déjà utilisé</p>";
