@@ -1,4 +1,5 @@
 <!--Information en bas-->
+
 <footer>
     <div id="footer">
         <div id="div_propriete_footer">
@@ -22,3 +23,4 @@
         </div>
     </div>
 </footer>
+

@@ -22,17 +22,17 @@ session_start();
                     <form action="Inscription.php" method="POST">
                         <p>
                             <label>Nom d'utilisateur</label>
-                            <input name='username' type="text" required>
+                            <input name='username' type="text" placeholder="Nom utilisateur" required>
                         </p>
                         <p>
                             <label>Adresse email</label>
-                            <input name='email' type="email" required>
+                            <input name='email' type="email" placeholder="email" required>
                         </p>
                         <p>
                             <label>Mot de passe</label>
-                            <input name='password' type="password" minlength="3" required>
+                            <input name='password' type="password" placeholder="Mot de passe" minlength="3" required>
                             <label>Repeter le mot de passe</label>
-                            <input name='repeat_password' type="password" minlength="3" required>
+                            <input name='repeat_password' type="password" placeholder="Mot de passe" minlength="3" required>
                         </p>
                         <input id='submit' type="submit" value="S'inscrire">
                         <?php

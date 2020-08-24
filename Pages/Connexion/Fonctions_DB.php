@@ -4,7 +4,7 @@
     $database = "juson_messagerie";
     $db_username = "juson_principal";
     $db_password = "loluser";
-    $db = new PDO("mysql:host=$servername;dbname=$database", $db_username, $db_password); //oN REPRENDS LES VARIABLES POUR SE CONNECTER A LA BASE DE DONNEE
+    $db = new PDO("mysql:host=$servername;dbname=$database", $db_username, $db_password); //ON REPRENDS LES VARIABLES POUR SE CONNECTER A LA BASE DE DONNEE
     // set the PDO error mode to exception
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

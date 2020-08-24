@@ -23,11 +23,11 @@ session_start();
                         <form method="POST">
                             <p>
                                 <label>Nom d'utilisateur</label>
-                                <input name='username' type="text" required>
+                                <input name='username' type="text" placeholder="Nom utilisteur" required>
                             </p>
                             <p>
                                 <label>Mot de passe</label>
-                                <input name='password' type="password" minlength="3" required>
+                                <input name='password' type="password" placeholder="Mot de passe" minlength="3" required>
 
                             </p>
                             <input id='submit' type="submit" value="Se connecter">
