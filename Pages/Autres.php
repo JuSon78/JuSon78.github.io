@@ -1,7 +1,10 @@
 <?php
+session_start();
+
 include 'Connexion/Fonctions_DB.php';
-if (!droit_admin($user)) {
-    echo"Vous n'avez pas les droits";
+if (!droit_admin($_SESSION['username'])) {
+    echo "Vous n'avez pas les droits !";
+    header( "refresh:3;url=Page_Accueil.php" );
     return false;
 }
 
