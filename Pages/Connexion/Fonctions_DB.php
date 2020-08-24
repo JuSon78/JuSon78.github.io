@@ -311,10 +311,13 @@ function recup_liste_invitations_envoyees_a_confirmer(int $user_id){
 //Autres Administration
 
 function droit_admin(String $user_connexion){
+        $db = $GLOBALS['db'];
+
         try{
-            $user = $_SESSION['username'];
-            $requete->prepare("SELECT `admin_right` FROM `user` WHERE `username`= :userconnexion ");
-            $requete->Bindparam('user_connexion', $user);
+
+            $requete = $db ->prepare("SELECT `admin_right` FROM `user` WHERE `username`= :userconnexion ");
+
+            $requete->bindParam('user_connexion', $user_connexion);
 
 
             $requete->exectue();
