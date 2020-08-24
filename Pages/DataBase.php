@@ -43,15 +43,15 @@
 
     //FONCTION SUPPRIMER UN UTILISATEUR
  function supprimer_utilisateur (String $supprimer_utilisateur) {
+        echo "salut";
         $db = $GLOBALS['db'];
-
      try {
         $requete = $db->prepare("DELETE FROM `user` WHERE username = :supprimer_utilisateur");
 
         $requete->bindParm("supprimer_utilisateur", $supprimer_utilisateur);
         $requete->execute();
 
-        echo"L'utilisateur a été supprimé";
+        echo "L'utilisateur a été supprimé";
      }
      catch (PDOException $e) {
          echo $e;

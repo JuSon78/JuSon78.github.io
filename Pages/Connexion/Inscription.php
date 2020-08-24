@@ -13,7 +13,6 @@ session_start();
     <header>
         <?php include"../../Style/Header_Inscription.php" ?>
     </header>
-
         <span>
             <div class="container">
                 <img style="width:100%; height: 400px" src="../../Photos/Logo/Page_Connexion.jpeg"  alt="CDA cabinet">
