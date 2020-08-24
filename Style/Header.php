@@ -26,7 +26,7 @@
 
                      $user = $_SESSION['username'];
 
-                     droit_admn($user);
+                     droit_admin($user);
 
 
                      if(isset($user)){

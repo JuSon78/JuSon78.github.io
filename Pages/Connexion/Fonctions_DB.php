@@ -310,12 +310,12 @@ function recup_liste_invitations_envoyees_a_confirmer(int $user_id){
 
 //Autres Administration
 
-function droit_admn(String $droit_admn){
+function droit_admin(String $droit_admin){
         try{
 
         }
-        catch {
-
+        catch (PDOException $e) {
+            echo $e;
         }
 }
 
