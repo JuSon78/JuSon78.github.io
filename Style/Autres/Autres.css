@@ -41,3 +41,11 @@ label {
     padding: 5px;
     padding-right: 120px;
 }
+
+#erreur {
+    text-align: Center;
+    margin-top: 20%;
+    font-size: 50px;
+    color: darkred;
+    background-color: indianred;
+}

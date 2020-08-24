@@ -10,7 +10,7 @@
     <?php
     include"../Style/Header.php";
     if (!droit_admin($_SESSION['username'])) {
-        echo "Vous n'avez pas les droits !";
+        echo "<p id='erreur'> vous n'avez pas les droits !!!!</p>";
         header( "refresh:3;url=Page_Accueil.php" );
         return false;
     }
