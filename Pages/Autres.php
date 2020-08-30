@@ -16,7 +16,6 @@
     }
     ?>
 
-
         <div class="body"> </div>
         <span style="text-align: center ">
         <p>

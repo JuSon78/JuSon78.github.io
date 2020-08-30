@@ -1,6 +1,6 @@
  <?php
  $servername = "mysql-juson.alwaysdata.net";
- $database = "juson_messagerie";
+ $database = "juson_principal";
  $db_username = "juson_principal";
  $db_password = "loluser";
     try {

@@ -11,7 +11,7 @@
         <?php include"../Style/Header.php" ?>
         <div style="margin-left: 5px">
             <h1>Ajouter une idée d'activité</h1>
-            <form method="POST">
+            <form method="GET" id="form_ajout_activite">
                 <p>
                     <label>Titre</label>
                     <input name='titre' type="text" placeholder="Nom de l'activité" required>
@@ -23,12 +23,16 @@
                 </p>
                 <p>
                     <label>Description</label>
-                    <input name='description' type="text" placeholder="Description" required>
+                    <textarea name='description' type="text" form="form_ajout_activite" placeholder="Description" required></textarea>
 
                 </p>
                 <p>
                     <label>Importance</label>
-                    <input name='importance' type="text" required>
+                    <SELECT name="nom" size="1">
+                        <OPTION>faible
+                        <OPTION selected>moyen
+                        <OPTION>jeudi
+                    </SELECT>
 
                 </p>
                 <input id='submit' type="submit" value="Se connecter">
@@ -40,13 +44,15 @@
                 }
                 ?>
             </form>
-            <div class="rating"><!--
-               --><a href="#5" title="Donner 5 étoiles">☆</a><!--
-               --><a href="#4" title="Donner 4 étoiles">☆</a><!--
-               --><a href="#3" title="Donner 3 étoiles">☆</a><!--
-               --><a href="#2" title="Donner 2 étoiles">☆</a><!--
-               --><a href="#1" title="Donner 1 étoile">☆</a>
+            <!--
+            <div class="rating">
+                <a href="#5" title="Donner 5 étoiles">☆</a>
+                <a href="#4" title="Donner 4 étoiles">☆</a>
+                <a href="#3" title="Donner 3 étoiles">☆</a>
+                <a href="#2" title="Donner 2 étoiles">☆</a>
+                <a href="#1" title="Donner 1 étoile">☆</a>
             </div>
+            -->
         </div>
     </body>
     <?php
