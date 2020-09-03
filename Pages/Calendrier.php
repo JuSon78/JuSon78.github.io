@@ -54,12 +54,28 @@
             $importance = 1;
         }
         ajout_activite($_POST['titre'], $_POST['lieu'], $_POST['description'], $importance);
+        header('Location: Calendrier.php');
     }
     ?>
     </br>
     </br>
     </br>
-    <?php include"Affichage_taches.php" ?>
+    <?php include "Fonctions_DB_Calendrier.php" ?>
 
+    <h2>Supprimer une tache</h2>
+    <form method="POST">
+        <p> <label> Titre de l'activité :</label> <br>
+            <input type="text" placeholder="Entrez le titre de l'activité que vous voulez supprimer"  name="titre_activite"> </p>
+
+        <p> <input class="input_Enregistrer" type="submit" value="Supprimer"> </p>
+    </form>
+
+    <?php
+
+    if (isset ($_POST['titre_activite'])) {
+        supprimer_activite($_POST['titre_activite']);
+        header('Location: Calendrier.php');
+    }
+    ?>
     <?php include"../Style/Footer.php" ?>
 </html>

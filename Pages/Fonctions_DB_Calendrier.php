@@ -50,16 +50,15 @@ try {
 }
 
 
-//FONCTION SUPPRIMER UN UTILISATEUR
-function supprimer_utilisateur (String $supprimer_utilisateur) {
+function supprimer_activite (String $titre_activite) {
     $db = $GLOBALS['db'];
     try {
-        $requete = $db->prepare("DELETE FROM `user` WHERE username = :supprimer_utilisateur");
+        $requete = $db->prepare("DELETE FROM activities WHERE titre = :titre_activite");
 
-        $requete->bindParam("supprimer_utilisateur", $supprimer_utilisateur);
+        $requete->bindParam("titre_activite", $titre_activite);
         $requete->execute();
 
-        echo "L'utilisateur a été supprimé";
+        echo "L'activité a été supprimée";
     }
     catch (PDOException $e) {
         echo $e;
