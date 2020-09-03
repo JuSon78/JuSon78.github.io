@@ -47,6 +47,8 @@ session_start();
                  </div>
             </div>
         </span>
+    <?php include "../../Style/Connexion/Footer_Connexion.php"  ?>
+
 </body>
 
     <?php

@@ -110,9 +110,7 @@
                 </div>
             </div>
         </div>
-
-
-        <?php include "../../Style/FooterNA.php" ?>
+        <?php include "../../Style/FooterNA2.php" ?>
 
     </body>
 </html>

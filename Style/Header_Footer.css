@@ -79,8 +79,18 @@
     padding-top: 10px;
     padding-bottom: 10px;
     bottom: 0;
+    background-color: #cdcbcb;
+    color: black;
+}
+#footerNA2 {
+    width: 100%;
+    font-size: .9em;
+    display: inline-flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0;
     background-color: #313131;
-    color: gray;
+    color: grey;
 }
 #footer {
     width: 100%;
