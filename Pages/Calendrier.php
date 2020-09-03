@@ -8,7 +8,7 @@
 </head>
     <body>
         <?php include"../Style/Header.php" ?>
-        <div style="margin-left: 5px">
+        <div id="test" style="margin-left: 5px">
             <h1>Ajouter une idée d'activité</h1>
             <form method="POST" id="form_ajout_activite">
                 <p>
