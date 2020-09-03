@@ -37,7 +37,6 @@
             </p>
         </span>
 
-
         <p>
             <?php
 
@@ -48,9 +47,6 @@
             ?>
         </p>
         <br>
-
-
-            <?php include"../Style/Footer.php" ?>
-
     </body>
+    <?php include"../Style/Footer.php" ?>
 </html>

@@ -310,8 +310,7 @@ function recup_liste_invitations_envoyees_a_confirmer(int $user_id){
 
 //Autres Administration
 function droit_admin(String $user_connexion){
-        $db = $GLOBALS['db'];
-
+    $db = $GLOBALS['db'];
     try{
 
         $requete = $db ->prepare("SELECT `admin_right` FROM `user` WHERE `username`= :user_connexion AND `admin_right` = 1");
@@ -331,5 +330,22 @@ function droit_admin(String $user_connexion){
         echo $e;
     }
 }
+
+function ajout_activite(String $titre, String $lieu, String $description, int $importance){
+    $db = $GLOBALS['db'];
+    try {
+        $statement = $db->prepare("INSERT INTO activities (titre, lieu, description, importance) VALUES (:titre, :lieu, :description, :importance)");
+        $statement->bindParam('titre', $titre);
+        $statement->bindParam('lieu', $lieu);
+        $statement->bindParam('description', $description);
+        $statement->bindParam('importance', $importance);
+
+        $statement->execute();
+        header("Calendrier.php");
+    } catch (PDOException $e) {
+        echo $e;
+    }
+}
+
 
 ?>

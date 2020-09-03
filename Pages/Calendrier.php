@@ -7,11 +7,10 @@
     <link rel="stylesheet" type="text/css" href="../Style/Calendrier/Calendrier.css">
 </head>
     <body>
-        <!--Header-->
         <?php include"../Style/Header.php" ?>
         <div style="margin-left: 5px">
             <h1>Ajouter une idée d'activité</h1>
-            <form method="GET" id="form_ajout_activite">
+            <form method="POST" id="form_ajout_activite">
                 <p>
                     <label>Titre</label>
                     <input name='titre' type="text" placeholder="Nom de l'activité" required>
@@ -28,49 +27,39 @@
                 </p>
                 <p>
                     <label>Importance</label>
-                    <SELECT name="nom" size="1">
+                    <SELECT name="importance" size="1">
                         <OPTION>faible
-                        <OPTION selected>moyen
-                        <OPTION>jeudi
+                        <OPTION selected>normale
+                        <OPTION>forte
                     </SELECT>
 
                 </p>
-                <input id='submit' type="submit" value="Se connecter">
-                <?php
-                if(isset($_GET['erreur'])){
-                    $err = $_GET['erreur'];
-                    if($err==1)
-                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                }
-                ?>
+                <input id='submit' type="submit" value="Ajouter l'activité">
             </form>
-            <!--
-            <div class="rating">
-                <a href="#5" title="Donner 5 étoiles">☆</a>
-                <a href="#4" title="Donner 4 étoiles">☆</a>
-                <a href="#3" title="Donner 3 étoiles">☆</a>
-                <a href="#2" title="Donner 2 étoiles">☆</a>
-                <a href="#1" title="Donner 1 étoile">☆</a>
-            </div>
-            -->
+        </div>
+        <div>
+
         </div>
     </body>
     <?php
-    // ON VERIFIE SI UN PSEUDO ET UN PASSWORD SONT DEJA DEFINIS
-    if (isset($_POST['username']) && isset($_POST['password'])) {
-
-        $username = $_POST['username'];
-        $password = hash('sha512', $_POST['password']);
-
-        if (verif_connexion($username, $password)) { // SI LE COUPLE PSEUDO MDP ENTREE EXISTE BIEN
-            maj_derniere_connexion($username);  // MISE A JOUR DE LA DATE DE DERNIERE CONNEXION
-            header('Location: ../Page_Accueil.php');    // REDIRECTION VERS LA PAGE ACCUEIL.PHP
+    if (isset($_POST['titre']) && isset($_POST['lieu']) && isset($_POST['description']) && isset($_POST['importance'])) {
+        $importance = 999;
+        if($_POST['importance'] === "faible"){
+            $importance = 0;
         }
-        else {    // SI LE COUPLE PSEUDO MDP N'EXISTE PAS
-            header('Location: Connexion.php?erreur=1'); // LE COUPLE PSEUDO ET MOT DE PASSE ENTREE EST INCORRECT
+        elseif ($_POST['importance'] === "forte"){
+            $importance = 2;
         }
-
-
+        else{
+            $importance = 1;
+        }
+        ajout_activite($_POST['titre'], $_POST['lieu'], $_POST['description'], $importance);
     }
     ?>
+    </br>
+    </br>
+    </br>
+    <?php include"Affichage_taches.php" ?>
+
+    <?php include"../Style/Footer.php" ?>
 </html>

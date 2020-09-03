@@ -1,4 +1,4 @@
-<header onload="initElement();">
+<header>
     <?php
         session_start();
         if(isset($_GET['deconnexion']) OR !isset($_SESSION['username']))

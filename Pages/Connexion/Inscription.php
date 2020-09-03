@@ -54,7 +54,7 @@ session_start();
 
     if(isset($_SESSION['username'])){
         echo "Vous êtes déjà connecté ! Vous allez être redirigé automatiquement vers la page d'accueil.";
-        header( "refresh:3;url=Accueil.php" );
+        header( "refresh:3;url=../Page_Accueil.php" );
     }
     else {
 
