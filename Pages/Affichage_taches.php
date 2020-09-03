@@ -12,28 +12,28 @@ try {
     try{
         echo "<table>";
         echo "<tr>";
-        echo "<th>titre </th>";
-        echo "<th>lieu </th>";
-        echo "<th>description </th>";
-        echo "<th>importance </th>";
+        echo "<th class='tableau'>titre </th>";
+        echo "<th class='tableau'>lieu </th>";
+        echo "<th class='tableau'>description </th>";
+        echo "<th class='tableau'>importance </th>";
         echo "</tr>";
 
         while ($donnees = $resultat->fetch())
         {
             echo "<tr>";
 
-            echo "<td>" . $donnees['titre'] . "</td>";
-            echo "<td>" . $donnees['lieu'] . "</td>";
-            echo "<td>" . $donnees['description'] . "</td>";
+            echo "<td class='tableau'>" . $donnees['titre'] . "</td>";
+            echo "<td class='tableau'>" . $donnees['lieu'] . "</td>";
+            echo "<td class='tableau'>" . $donnees['description'] . "</td>";
             $importance = $donnees['importance'];
             if($importance == 0){
-                echo "<td>faible</td>";
+                echo "<td class='tableau'>faible</td>";
             }
             elseif ($importance == 1){
-                echo "<td>normale</td>";
+                echo "<td class='tableau'>normale</td>";
             }
             else{
-                echo "<td>forte</td>";
+                echo "<td class='tableau'>forte</td>";
             }
 
             echo "</tr>";
