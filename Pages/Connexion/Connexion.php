@@ -27,7 +27,7 @@ session_start();
                             </p>
                             <p>
                                 <label>Mot de passe</label>
-                                <input name='password' type="password" placeholder="Mot de passe" minlength="3" required>
+                                <input style="margin-left:25px " name='password' type="password" placeholder="Mot de passe" minlength="3" required>
 
                             </p>
                             <input id='submit' type="submit" value="Se connecter">
@@ -43,6 +43,7 @@ session_start();
                 </div>
             </span>
 
+        <?php include "../../Style/Connexion/Footer_Connexion.php"  ?>
     </body>
 
 <?php
