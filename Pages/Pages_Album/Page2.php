@@ -23,7 +23,6 @@
         </p>
 
 
-
         <!--Menu à droit-->
         <div id="rubrique">
             <ul>
@@ -114,6 +113,8 @@
 
         <div style="float: right";"> <a id="Suite" href="Page3.php"> Suite </a> </div>
 
+
+        <!--Footer-->
         <?php include "../../Style/Photos/FooterPagePhotos.php" ?>
 
     </body>

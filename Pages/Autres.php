@@ -6,26 +6,26 @@
     <link rel="stylesheet" type="text/css" href="../Style/Autres/Autres.css">
 </head>
     <body style=" background: url('../Photos/Autres/Fond.jpg'); background-repeat:no-repeat; background-size: 1500px ">
-    <!--Header-->
-    <?php
-    include"../Style/Header.php";
-    if (!droit_admin($_SESSION['username'])) {
-        echo "<p id='erreur'> vous n'avez pas les droits !!!!</p>";
-        header( "refresh:3;url=Page_Accueil.php" );
-        return false;
-    }
-    ?>
-
-        <div class="body"> </div>
+        <!--Header-->
+        <?php
+        include"../Style/Header.php";
+        if (!droit_admin($_SESSION['username'])) {
+            echo "<p id='erreur'> vous n'avez pas les droits !!!!</p>";
+            header( "refresh:3;url=Page_Accueil.php" );
+            return false;
+        }
+        ?>
+        <!--Formulaire Liste utilisateurs-->
         <span style="text-align: center ">
-        <p>
-        <h1>liste des utilisateurs du site </h1>
-            <?php include"DataBase.php" ?>
-        </p>
+            <p>
+                <h1>liste des utilisateurs du site </h1>
+                <?php include"DataBase.php" ?>
+            </p>
         </span>
 
-        <span style="text-align: center"
 
+        <!--Formulaire suppression utilisateurs-->
+        <span style="text-align: center"
             <p>
                 <h2>Supprimer utilisateur</h2>
                 <form method="POST">
@@ -47,6 +47,8 @@
             ?>
         </p>
         <br>
+
+        <!--Footer-->
+        <?php include"../Style/Footer.php" ?>
     </body>
-    <?php include"../Style/Footer.php" ?>
 </html>
