@@ -9,37 +9,41 @@
     <body>
         <!--Header-->
         <?php include"../Style/Header.php" ?>
+        <br>
 
         <!--Formulaire ajouter une tâche-->
         <div id="test" style="margin-left: 5px">
-            <h1>Ajouter une idée d'activité</h1>
             <form method="POST" id="form_ajout_activite">
-                <p>
-                    <label>Titre</label>
-                    <input name='titre' type="text" placeholder="Nom de l'activité" required>
-                </p>
-                <p>
-                    <label>Lieu</label>
-                    <input name='lieu' type="text" placeholder="Lieu de l'activité" required>
+                <fieldset id="Ajouter_tache">
+                    <legend>Ajouter une tâche </legend>
+                    <p>
+                        <label>Titre</label>
+                        <input name='titre' type="text" placeholder="Nom de l'activité" required>
+                    </p>
+                    <p>
+                        <label>Lieu</label>
+                        <input name='lieu' type="text" placeholder="Lieu de l'activité" required>
 
-                </p>
-                <p>
-                    <label>Description</label>
-                    <textarea name='description' type="text" form="form_ajout_activite" placeholder="Description" required></textarea>
+                    </p>
+                    <p>
+                        <label>Description</label>
+                        <textarea name='description' type="text" form="form_ajout_activite" placeholder="Description" required></textarea>
 
-                </p>
-                <p>
-                    <label>Importance</label>
-                    <SELECT name="importance" size="1">
-                        <OPTION>faible
-                        <OPTION selected>normale
-                        <OPTION>forte
-                    </SELECT>
+                    </p>
+                    <p>
+                        <label>Importance</label>
+                        <SELECT name="importance" size="1">
+                            <OPTION>faible
+                            <OPTION selected>normale
+                            <OPTION>forte
+                        </SELECT>
 
-                </p>
-                <input id='submit' type="submit" value="Ajouter l'activité">
+                    </p>
+                    <input style="font-size: 18px" id='submit' type="submit" value="Ajouter l'activité">
+                </fieldset>
             </form>
         </div>
+        <br>
 
         <!--Récupération les données du formulaire pour les ajouter aux tableaux-->
         <?php
@@ -58,20 +62,15 @@
             header('Location: Calendrier.php');
         }
         ?>
-        </br>
-        </br>
-        </br>
-
-        <!--Affichage tableau-->
-        <?php include "Fonctions_DB_Calendrier.php" ?>
 
         <!--Suppression tâche-->
-        <h2>Supprimer une tache</h2>
         <form method="POST">
-            <p> <label> Titre de l'activité :</label> <br>
-                <input type="text" placeholder="Entrez le titre de l'activité que vous voulez supprimer"  name="titre_activite"> </p>
-
-            <p> <input class="input_Enregistrer" type="submit" value="Supprimer"> </p>
+            <fieldset id="Suppression_tache">
+                <legend>Suppression une tâche </legend>
+                <p> <label> Titre de l'activité :</label> <br>
+                    <input type="text" placeholder="Entrez le titre de l'activité que vous voulez supprimer"  name="titre_activite"> </p>
+                <p> <input class="input_Enregistrer" type="submit" value="Supprimer"> </p>
+            </fieldset>
         </form>
 
         <!--Récupération les données du formulaire précédent-->
@@ -82,6 +81,12 @@
             header('Location: Calendrier.php');
         }
         ?>
+        </br>
+        </br>
+        </br>
+
+        <!--Affichage tableau-->
+        <?php include "Fonctions_DB_Calendrier.php" ?>
 
 
         <!--Footer-->

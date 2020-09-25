@@ -24,3 +24,36 @@ body {
 .tableau{
     padding-right: 100px;
 }
+table {
+    border-collapse:collapse;
+    width:70%;
+    margin-left: 15%;
+}
+th, td {
+    border:1px solid black;
+    width:20%;
+    background-color: #e0e0e0;
+    text-align:center
+}
+td {
+    text-align:center;
+}
+caption {
+    font-weight:bold
+}
+th {
+    background-color: #d4d3d3;
+    text-align:center
+}
+legend {
+    font-size: large;
+    font-weight: bold;
+    color: darkblue;
+}
+
+fieldset {
+    border: 1px dashed gray;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+}
