@@ -32,7 +32,7 @@ table {
 th, td {
     border:1px solid black;
     width:20%;
-    background-color: #e0e0e0;
+    background-color: lightblue;
     text-align:center
 }
 td {
@@ -42,8 +42,9 @@ caption {
     font-weight:bold
 }
 th {
-    background-color: #d4d3d3;
-    text-align:center
+    background-color: darkblue;
+    text-align:center;
+    color:white;
 }
 legend {
     font-size: large;
