@@ -142,7 +142,6 @@ label {
     width: 100%;
     display: inline-block;
     position: relative;
-    background-color: #D3D3D3;
     overflow: hidden;
 }
 .container .text {

@@ -25,7 +25,7 @@
 
         <!--Information en bas-->
         <!--FOOTER-->
-        <?php include"../Style/FooterNA.php" ?>
+        <?php include "../Style/FooterAccueil.php" ?>
 
 
     </body>

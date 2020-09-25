@@ -82,7 +82,7 @@
             </div>
         </div>
 
-        <?php include "../Style/FooterNA.php" ?>
+        <?php include "../Style/Photos/FooterPhoto.php" ?>
 
     </body>
 </html>

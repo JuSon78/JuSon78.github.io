@@ -1,6 +1,6 @@
 <!--Information en bas-->
 <footer>
-    <div id="footerNA">
+    <div id="footerAccueil">
         <div id="div_propriete_footer">
             Propriété de Wilson HUARD et Julien DAURAT<br>
             <small>

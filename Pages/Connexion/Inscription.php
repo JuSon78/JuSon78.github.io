@@ -9,13 +9,13 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../../Style/Header_Footer.css">
     <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
-<body class="ConnInsc">
+<body class="ConnInsc" style="background: url('../../Photos/Autres/Fond.jpg'); background-repeat:no-repeat; background-size: 1500px">
     <header>
         <?php include"../../Style/Header_Inscription.php" ?>
     </header>
         <span>
             <div class="container">
-                <img style="width:100%; height: 400px" src="../../Photos/Logo/Page_Connexion.jpeg"  alt="CDA cabinet">
+                <img style="width:70%; height: 300px; display: block; margin-left: auto;margin-right: auto" src="../../Photos/Logo/Page_Connexion.jpeg"  alt="CDA cabinet">
                  <div style="text-align: center">
                     <h1 id="Inscription"> Inscription</h1>
                     <form action="Inscription.php" method="POST">

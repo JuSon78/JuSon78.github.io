@@ -72,7 +72,7 @@
     border-color: #696969 #696969;
 }
 
-#footerNA {
+#footerPhoto {
     width: 100%;
     font-size: .9em;
     display: inline-flex;
@@ -82,7 +82,7 @@
     background-color: #cdcbcb;
     color: black;
 }
-#footerNA2 {
+#footerAccueil {
     width: 100%;
     font-size: .9em;
     display: inline-flex;
@@ -123,6 +123,7 @@
     display: inline-flex;
     padding-top: 10px;
     padding-bottom: 10px;
+    position: absolute;
     bottom: 0;
 }
 

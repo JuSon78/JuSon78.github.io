@@ -114,7 +114,7 @@
 
         <div style="float: right";"> <a id="Suite" href="Page3.php"> Suite </a> </div>
 
-        <?php include "../../Style/FooterNA2.php" ?>
+        <?php include "../../Style/Photos/FooterPagePhotos.php" ?>
 
     </body>
 </html>

@@ -9,39 +9,39 @@ session_start();
     <link rel="stylesheet" type="text/css" href="Style.css">
     <link rel="stylesheet" type="text/css" href="../../Style/Header_Footer.css">
 </head>
-    <body class="ConnInsc">
+    <body class="ConnInsc" style="background: url('../../Photos/Autres/Fond.jpg'); background-repeat:no-repeat; background-size: 1500px">
         <header>
             <!--Header-->
             <?php include"../../Style/Header_Connexion.php" ?>
         </header>
 
         <span>
-                <div class="container">
-                    <img style="width:100%; height: 400px" src="../../Photos/Logo/Page_Connexion.jpeg"  alt="CDA cabinet">
-                     <div style="text-align: center">
-                        <h1 id="Connexion"> Connexion</h1>
-                        <form method="POST">
-                            <p>
-                                <label>Nom d'utilisateur</label>
-                                <input name='username' type="text" placeholder="Nom utilisteur" required>
-                            </p>
-                            <p>
-                                <label>Mot de passe</label>
-                                <input style="margin-left:25px " name='password' type="password" placeholder="Mot de passe" minlength="3" required>
+            <div class="container">
+                <img style="width:70%; height: 300px; display: block; margin-left: auto;margin-right: auto" src="../../Photos/Logo/Page_Connexion.jpeg"  alt="CDA cabinet">
+                 <div style="text-align: center">
+                    <h1 id="Connexion"> Connexion</h1>
+                    <form method="POST">
+                        <p>
+                            <label>Nom d'utilisateur</label>
+                            <input name='username' type="text" placeholder="Nom utilisteur" required>
+                        </p>
+                        <p>
+                            <label>Mot de passe</label>
+                            <input style="margin-left:25px " name='password' type="password" placeholder="Mot de passe" minlength="3" required>
 
-                            </p>
-                            <input id='submit' type="submit" value="Se connecter">
-                            <?php
-                            if(isset($_GET['erreur'])){
-                                $err = $_GET['erreur'];
-                                if($err==1)
-                                    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                            }
-                            ?>
-                        </form>
-                     </div>
-                </div>
-            </span>
+                        </p>
+                        <input id='submit' type="submit" value="Se connecter">
+                        <?php
+                        if(isset($_GET['erreur'])){
+                            $err = $_GET['erreur'];
+                            if($err==1)
+                                echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                        }
+                        ?>
+                    </form>
+                 </div>
+            </div>
+        </span>
 
         <?php include "../../Style/Connexion/Footer_Connexion.php"  ?>
     </body>

@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../Style/Header_Footer.css">
     <link rel="stylesheet" type="text/css" href="../Style/Autres/Autres.css">
 </head>
-    <body style=" background: url('../Photos/Autres/Fond.jpg') ">
+    <body style=" background: url('../Photos/Autres/Fond.jpg'); background-repeat:no-repeat; background-size: 1500px ">
     <!--Header-->
     <?php
     include"../Style/Header.php";
