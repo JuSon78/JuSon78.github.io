@@ -1,5 +1,10 @@
+<?php
+if(isset($_GET['conversation_id'])){
+    $conversation_id = $_GET['conversation_id'];
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Message</title>
@@ -7,47 +12,73 @@
     <link rel="stylesheet" type="text/css" href="../Style/Message/Message.css">
     <link rel="stylesheet" type="text/css" href="../Pages/Connexion/Style.css">
 </head>
-    <body>
-        <!--Header-->
-        <?php include"../Style/Header.php" ?>
+<body>
+<!--Header-->
+<?php include"../Style/Header.php" ?>
 
-        <div style="margin-left: 22px">
-        <p><b>Ecrire à un ami:</b></p>
-        <form action="Message.php" method="POST">
-                <p>
-                <label>Nom d'utilisateur</label>
-                <input name='username' type="text" required>
-            </p>
-            <input id='submit' type="submit" value="Envoyer la demande d'ami">
+<div id="messages_window">
+    <div id="left_panel" class="block">
+        <div id="conversations_list">
             <?php
-            if(isset($_GET['erreur'])){
-                $err = $_GET['erreur'];
-                if($err==1)
-                    echo "<p style='color:red'>Vous ne pouvez pas vous envoyer un message</p>";
-                else if($err==2)
-                    echo "<p style='color:red'>L'utilisateur n'existe pas</p>";
-                else if($err==3)
-                    echo "<p style='color:red'>Vous êtes déjà ami avec cette personne, ou une invitation est en attente d'acceptation</p>";
+            $resultat = recup_liste_conversations($_SESSION['id']);
+            if(empty($resultat)){
+                echo "<div class='conversation'>
+                                <div class='conversation_title'>Aucune conversation</div>
+                              </div>";
+            }
+            else{
+                foreach($resultat as $element){
+                    $titre_conversation = $element['title'];
+                    $id_conversation = $element['id'];
+                    echo "<div class='conversation' style=\"cursor: pointer;\" onclick=\"window.location='?conversation_id=$id_conversation';\">
+                                    <div class='conversation_title'>".$titre_conversation."</div>
+                                  </div>";
+                }
             }
             ?>
-            </div>
-        </form>
-        </br>
-        <div id="messages_window">
-            <div id="conversations_panel" class="block">
-                <div class="conversation"></div>
-            </div>
-            <div id="message_text_field" class="block">
-                <form>
-                    <input type="text">
-                    <input type="submit" value="Envoyer">
-                </form>
-            </div>
-            <br clear="both" />
         </div>
-        </body>
-
-        <?php include"../Style/Footer.php" ?>
-
-    </body>
+        <?php
+        echo "<div id='create_conversation' style=\"cursor: pointer;\" onclick=\"window.location='?creation_conv';\">
+                <div class='conversation_title_creation'>Créer une nouvelle conversation</div>
+            </div>";
+        ?>
+    </div>
+    <!--FIN CONVERSATION PANEL -->
+    <div id="right_panel" class="block">
+        <div id="conversation_title">
+            <?php
+            if(!empty($conversation_id)) {
+                echo $conversation_id;
+            }
+            ?>
+        </div>
+        <div id="messages_list">
+            <?php
+            if(!empty($conversation_id)){
+                $user_id = $_SESSION['id'];
+                $tab_messages = recup_messages_conversation($conversation_id, $user_id);
+                if(empty($tab_messages)){
+                    echo "AUCUN MESSAGES";
+                }
+                else{
+                    foreach($tab_messages as $element){
+                        $sender_username = recup_username_utilisateur($element['sender_user_id']);
+                        $text = $element['text'];
+                        $creation_date = $element['creation_date'];
+                        echo $sender_username.": ".$text." (".$creation_date.")</br>";
+                    }
+                }
+            }
+            ?>
+        </div>
+        <div id="message_text_field">
+            <form method="POST">
+                <textarea type="textarea" id="message_input" name="textarea"></textarea>
+                <input type="submit" value="Envoyer" style="height: 50px">
+            </form>
+        </div>
+    </div>
+    <br clear="both" />
+</div>
+</body>
 </html>
