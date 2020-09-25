@@ -25,9 +25,12 @@ body {
     padding-right: 100px;
 }
 table {
-    border-collapse:collapse;
-    width:70%;
-    margin-left: 15%;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: grey;
+    margin-left: 5%;
 }
 th, td {
     border:1px solid black;
